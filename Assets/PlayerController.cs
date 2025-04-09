@@ -34,9 +34,9 @@ public class PlayerController : MonoBehaviour
         //Camera limitation variables
         const float MIN_Y = -60.0f;
         const float MAX_Y = 70.0f;
-
-        X += Input.GetAxis("Mouse X") * (Sensitivity * Time.deltaTime);
-        Y -= Input.GetAxis("Mouse Y") * (Sensitivity * Time.deltaTime);
+        Debug.Log(Screen.width/1980f);
+        X += Input.GetAxis("Mouse X") * (Sensitivity * Time.deltaTime * (Screen.width/1980f));
+        Y -= Input.GetAxis("Mouse Y") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
 
         if (Y < MIN_Y)
             Y = MIN_Y;
