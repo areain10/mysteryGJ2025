@@ -960,6 +960,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1024382604}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 802ff561a4b08db4dbfe526743953663,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1024382605}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 802ff561a4b08db4dbfe526743953663,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1024382606}
   m_SourcePrefab: {fileID: 100100000, guid: 802ff561a4b08db4dbfe526743953663, type: 3}
 --- !u!1 &1024382601 stripped
 GameObject:
@@ -988,6 +996,62 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.1338787, y: 0.23722506, z: 1.4768944}
   m_Center: {x: 0.04689312, y: -0.0001565218, z: 0.07137871}
+--- !u!23 &1024382605
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024382601}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -3033667219593020291, guid: 802ff561a4b08db4dbfe526743953663, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1024382606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024382601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c589c497bd4ab4a93aa888ac90280d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 0, g: 0, b: 0, a: 1}
+  renderer: {fileID: 0}
 --- !u!1 &1186165992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1602796114137605417, guid: 1c262db4bfdcaaf419499f8d029dbfee,
@@ -1771,7 +1835,6 @@ GameObject:
   - component: {fileID: 2022128144}
   - component: {fileID: 2022128145}
   - component: {fileID: 2022128146}
-  - component: {fileID: 2022128147}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1962,18 +2025,6 @@ MonoBehaviour:
   itemSeen: []
   roomsVisited: 
   notepad: 0
---- !u!114 &2022128147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022128138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c589c497bd4ab4a93aa888ac90280d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
