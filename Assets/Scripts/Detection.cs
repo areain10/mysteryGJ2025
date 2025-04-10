@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Detection : MonoBehaviour
 {
     [SerializeField] private Color startColor;
     [SerializeField] private Renderer renderer;
+    
+    [SerializeField] private GameObject itemPopup;
+    private TextMeshProUGUI itemDesc;
+    [SerializeField] private string description;
 
     void Start()
     {
         renderer = GetComponent<Renderer>();
+        
+        itemDesc = itemPopup.GetComponentInChildren<TextMeshProUGUI>();
 
         var col = renderer.material.color;
         col.a = 1f;
+
+        itemPopup.SetActive(false);
     }
 
     void Update()
@@ -25,7 +34,14 @@ public class Detection : MonoBehaviour
             if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.CompareTag("Interactable")) 
             {
                 Debug.Log("Interacted with: " + hit.collider.gameObject.name);
+
+                itemPopup.SetActive(true);
             }
+        }
+
+        if (itemPopup.activeSelf)
+        {
+            itemDesc.text = description;
         }
     }
 
