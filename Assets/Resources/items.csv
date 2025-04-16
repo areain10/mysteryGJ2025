@@ -1,0 +1,16 @@
+ID;NAME;PROMPT;FIRST TEXT;FOLLOW UP TEXT
+001;O'BRIENS BODY;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+002;KNIFE;Interact;A knife from the kitchen. Was this used on O’Brien?;FOLLOW UP TEXT
+003;MISSING AXE;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+004;O'BRIENS INJURIES;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+005;KEEPER'S LOGBOOK;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+006;MOORE'S JOURNAL;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+007;BOAT INDENT;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+008;BROKEN WINDOW;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+009;BEACH INDENT;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+010;MISSING FOOD;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+011;BLOOD SPLATTERS;Interact;From O’Brien.;FOLLOW UP TEXT
+012;EXTRA BEDDING;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+013;KEEPER'S LOGBOOK;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+014;MEDICAL SUPPLIES;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+015;BIBLE VERSES;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT

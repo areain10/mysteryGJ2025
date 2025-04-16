@@ -29,8 +29,7 @@ public class Detection : MonoBehaviour
 
     void Start()
     {
-        if (renderer == null)
-            renderer = GetComponent<Renderer>();
+        
 
         if (itemPopup != null)
         {
@@ -38,38 +37,48 @@ public class Detection : MonoBehaviour
             itemPopup.SetActive(false);
         }
 
-        var col = renderer.material.color;
-        col.a = 1f;
+       // var col = renderer.material.color;
+        //col.a = 1f;
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
+            Debug.Log("Pressed mouse 0");
             RaycastHit hit;
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f,0));
 
-            if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject) 
+            if (Physics.Raycast(ray, out hit)) 
             {
                 Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-
-                if (!seen)
+                try
                 {
-                    currentText = firstInteractionText;
-                    currentLine = 0;
+                    item script = hit.collider.gameObject.GetComponent<item>();
 
-                    itemPopup.SetActive(true);
-                    itemDesc.text = currentText[currentLine];
-                    isInteracting = true;
+                    GetComponent<clueManager>().itemsInteracted.Add(script.itemID);
+                    if (!script.seen)
+                    {
+                        currentText = script.firstInteractionText;
+                        currentLine = 0;
+
+                        itemPopup.SetActive(true);
+                        itemDesc.text = currentText[currentLine];
+                        isInteracting = true;
+                    }
+                    else
+                    {
+                        currentText = script.followUpText;
+                        currentLine = 0;
+
+                        itemPopup.SetActive(true);
+                        itemDesc.text = currentText[currentLine];
+                        isInteracting = true;
+                    }
                 }
-                else
+                catch
                 {
-                    currentText = followUpText;
-                    currentLine = 0;
 
-                    itemPopup.SetActive(true);
-                    itemDesc.text = currentText[currentLine];
-                    isInteracting = true;
                 }
             }
         }
@@ -149,12 +158,12 @@ public class Detection : MonoBehaviour
 
     void OnMouseEnter()
     {
-        startColor = renderer.material.color;
-        renderer.material.color = Color.red;
+        //startColor = renderer.material.color;
+        //renderer.material.color = Color.red;
     }
 
     void OnMouseExit()
     {
-        renderer.material.color = startColor;
+        //renderer.material.color = startColor;
     }
 }
