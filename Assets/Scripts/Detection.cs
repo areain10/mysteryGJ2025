@@ -40,22 +40,29 @@ public class Detection : MonoBehaviour
        // var col = renderer.material.color;
         //col.a = 1f;
     }
-
+    IEnumerator teleportTo(Transform loc)
+    {
+        gameObject.GetComponent<CharacterController>().enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        gameObject.transform.position = loc.position;
+        gameObject.GetComponent<CharacterController>().enabled = true;
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            Debug.Log("Pressed mouse 0");
+            
             RaycastHit hit;
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f,0));
 
             if (Physics.Raycast(ray, out hit)) 
             {
-                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-                try
+                
+                if (hit.collider.gameObject.GetComponent<item>() != null) 
                 {
+                    
                     item script = hit.collider.gameObject.GetComponent<item>();
-
+                    Debug.Log("Interacted with: " + script.itemName) ;
                     GetComponent<clueManager>().itemsInteracted.Add(script.itemID);
                     if (!script.seen)
                     {
@@ -76,9 +83,11 @@ public class Detection : MonoBehaviour
                         isInteracting = true;
                     }
                 }
-                catch
+                if (hit.collider.gameObject.GetComponent<door>() != null)
                 {
-
+                    door script = hit.collider.gameObject.GetComponent<door>();
+                    Debug.Log("FoundDoor");
+                    StartCoroutine( teleportTo(script.spawnPoint));
                 }
             }
         }
