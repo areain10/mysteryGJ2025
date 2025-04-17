@@ -27,12 +27,12 @@ public class item : MonoBehaviour
         foreach(var item in gm.itemMasterList)
         {
             //Debug.Log(gm.itemMasterList[0][0] + " " + itemID);
-            if (gm.itemMasterList[0][0] == itemID)
+            if (item[0] == itemID)
             {
-                itemName = gm.itemMasterList[0][1];
-                interactionPromptText = gm.itemMasterList[0][2];
-                firstInteractionText = new string[] { gm.itemMasterList[0][3] };
-                followUpText = new string[] { gm.itemMasterList[0][4] }; 
+                itemName = item[1];
+                interactionPromptText = item[2];
+                firstInteractionText = new string[] { item[3] };
+                followUpText = new string[] { item[4] }; 
 
             }
         }

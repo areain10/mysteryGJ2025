@@ -25,7 +25,7 @@ public class casefilewriter : MonoBehaviour
             "000 due to natural causes", "002 by suicide", "002 accidental" }
         };*/
         readCaseFileCSV();
-        importantID = FindAnyObjectByType<gameManager>().clueID;
+        //importantID = FindAnyObjectByType<gameManager>().clueID;
         currentwriting = -1;
         canchoose = false;
         caseTextBox.text = "";
@@ -50,7 +50,7 @@ public class casefilewriter : MonoBehaviour
     void loadNextLine(int lineNumber)
     {
         currentwriting = lineNumber;
-        caseTextBox.text += writing[currentwriting][2]+" ";
+        caseTextBox.text += writing[currentwriting][2].Replace("\\n", "\n") + " ";
         
         displayOptions(writing[currentwriting][3].Split('|'));
     }
@@ -66,7 +66,7 @@ public class casefilewriter : MonoBehaviour
             if (checkIfShouldDisplay(writing[Int32.Parse(currentOptions[i])]))
             {
                 numOfOptions++;
-                optionsTextBox.text += (numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2] + "\n";
+                optionsTextBox.text += (numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "\n";
             }
             
         }
@@ -114,4 +114,5 @@ public class casefilewriter : MonoBehaviour
             }
         }
     }
+    
 }

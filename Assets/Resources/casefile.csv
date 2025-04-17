@@ -1,10 +1,10 @@
 ID;Items needed to show sepperated by | (000 if none);text;options id sepperated by |
-001;000;"Scene at Halkin Isle visited on March 21, 1982.";002
-002;000;"Initial reason for visit being that keepers failed to ignite the light as of 17 March. Keepers at the time were Hugh O’Brien, age 50, and Jack Moore, age 34.";003
+001;000;Scene at Halkin Isle visited on March 21, 1982.\n\n;002
+002;000;Initial reason for visit being that keepers failed to ignite the light as of 17 March. Keepers at the time were Hugh O’Brien, age 50, and Jack Moore, age 34.\n\n;003
 003;000;State of location was found to be;007|008
-004;000;O’Brien;009|010
-005;000;Moore ;024|025|028
-006;000;Investigation by writing officer is concluded. Case report will be presented for review and guide any necessary subsequent investigation(s). ;999
+004;000;\n\nO’Brien;009|010
+005;000;\n\nMoore ;024|025|028
+006;000;\n\n\nInvestigation by writing officer is concluded. Case report will be presented for review and guide any necessary subsequent investigation(s). ;999
 007;000;standard.;004
 008;000;unusual.;004
 009;000;not found.;005

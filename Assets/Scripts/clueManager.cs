@@ -37,7 +37,7 @@ public class clueManager : MonoBehaviour
         canvas.enabled = notepad;
         
         itemsInteracted = new List<string>();
-        itemsInteracted.Add("000");
+        //itemsInteracted.Add("000");
         cluesWritten = new List<string[]>
         {
             new string[] { testNum, testName, testRoom }
