@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
             const float MIN_Y = -60.0f;
             const float MAX_Y = 70.0f;
             Debug.Log(Screen.width / 1980f);
-            X += Input.GetAxis("Mouse X") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
-            Y -= Input.GetAxis("Mouse Y") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
+            X += Input.GetAxisRaw("Mouse X") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
+            Y -= Input.GetAxisRaw("Mouse Y") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
 
             if (Y < MIN_Y)
                 Y = MIN_Y;
@@ -49,8 +49,8 @@ public class PlayerController : MonoBehaviour
             #endregion
             transform.localRotation = Quaternion.Euler(Y, X, 0.0f);
 
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
             Vector3 forward = transform.forward * vertical;
             Vector3 right = transform.right * horizontal;
 
