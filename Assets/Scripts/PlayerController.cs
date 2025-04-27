@@ -30,6 +30,14 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        try
+        {
+            Sensitivity = 200 * GameObject.FindAnyObjectByType<menus>().sensitivity;
+        }
+        catch
+        {
+
+        }
         if (!gameObject.GetComponent<clueManager>().notepad)
         {
 
