@@ -16,7 +16,13 @@ public class importantItems : MonoBehaviour
     {
         //caseWriter.SetActive(false);
         pageNum = 1;
-        itemsID = FindAnyObjectByType<gameManager>().clueID;
+        try
+        {
+            itemsID = FindAnyObjectByType<gameManager>().clueID;
+        }
+        catch{
+            itemsID = new List<string> { "001", "002"};
+        }
         loadPage();
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;

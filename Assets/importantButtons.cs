@@ -18,6 +18,7 @@ public class importantButtons : MonoBehaviour
     public void instantiationOfButton(string id)
     {
         ItemID = id;
+        
         gameManager gm = GameObject.FindAnyObjectByType<gameManager>();
         foreach (var item in gm.itemMasterList)
         {

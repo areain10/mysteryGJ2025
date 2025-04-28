@@ -12,7 +12,7 @@ public class gameManager : MonoBehaviour
     {
         cluesCollected = cM.cluesWritten;
         clueID = cM.itemsInteracted;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         foreach(var clue in cluesCollected[0]) Debug.Log(clue.ToString());
         foreach(var items in clueID) Debug.Log(items.ToString());
     }
