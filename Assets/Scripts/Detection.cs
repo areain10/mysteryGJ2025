@@ -6,7 +6,7 @@ using TMPro;
 public class Detection : MonoBehaviour
 {
     [SerializeField] private Color startColor;
-    [SerializeField] private Renderer renderer;
+    //[SerializeField] private Renderer renderer;
 
     [SerializeField] private GameObject itemPopup;
     private TextMeshProUGUI itemDesc;

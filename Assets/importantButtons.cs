@@ -31,8 +31,25 @@ public class importantButtons : MonoBehaviour
         }
         
     }
+    public void instantiationCaseButton(string id)
+    {
+        ItemID = id;
+
+        gameManager gm = GameObject.FindAnyObjectByType<gameManager>();
+        foreach (var item in gm.itemMasterList)
+        {
+            //Debug.Log(gm.itemMasterList[0][0] + " " + itemID);
+            if (item[0] == ItemID)
+            {
+                GetComponentInChildren<TextMeshProUGUI>().text = item[1];
+
+            }
+        }
+
+    }
     public void toggleImportantItem()
     {
+        Debug.Log("Hey this works");
         if (iiManager.importantItemsFinalList.Contains(ItemID))
         {
             iiManager.importantItemsFinalList.Remove(ItemID);
@@ -48,6 +65,12 @@ public class importantButtons : MonoBehaviour
             }
             
         }
+    }
+    public void selectReason()
+    {
+        casefilewriter writer = GameObject.FindAnyObjectByType<casefilewriter>();
+        writer.currentSelectedEvidence = ItemID;
+
     }
     // Update is called once per frame
     void Update()

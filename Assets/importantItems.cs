@@ -92,8 +92,10 @@ public class importantItems : MonoBehaviour
 
         GameObject go = Instantiate(caseWriter);
         go.GetComponent<casefilewriter>().importantID = importantItemsFinalList;
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
+
+
     // Update is called once per frame
     void Update()
     {
