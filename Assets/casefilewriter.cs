@@ -29,7 +29,7 @@ public class casefilewriter : MonoBehaviour
         currentwriting = -1;
         canchoose = false;
         caseTextBox.text = "";
-        loadNextLine(1);
+        StartCoroutine(loadNextLine(1));
        
     }
     public void readCaseFileCSV()
@@ -47,13 +47,21 @@ public class casefilewriter : MonoBehaviour
         
         }
     }
-    void loadNextLine(int lineNumber)
+    IEnumerator loadNextLine(int lineNumber)
     {
         currentwriting = lineNumber;
-        caseTextBox.text += writing[currentwriting][2].Replace("\\n", "\n") + " ";
+        string tmp = writing[currentwriting][2].Replace("\\n", "\n") + " ";
+
+        foreach(char c in tmp)
+        {
+            caseTextBox.text += c;
+            yield return new WaitForSeconds(0.05f);
+        }
         
         displayOptions(writing[currentwriting][3].Split('|'));
+       
     }
+
     void displayOptions(string[] currentOptions)
     {
         currentOption = currentOptions;
@@ -96,7 +104,7 @@ public class casefilewriter : MonoBehaviour
     }
     void chooseOption(int option)
     {
-        loadNextLine(Int32.Parse(currentOption[option-1]));
+        StartCoroutine(loadNextLine(Int32.Parse(currentOption[option-1])));
         //caseTextBox.text += " "+ writing[currentwriting][option];
         //loadNextLine();
     }
