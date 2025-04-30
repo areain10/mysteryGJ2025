@@ -76,8 +76,10 @@ public class safe : MonoBehaviour
             {
                 ShowKeypad();
             }
+            codeText.text = currentCode[0] + " " + currentCode[1] + " " + currentCode[2];
         }
-        codeText.text = currentCode[0] + " " + currentCode[1] + " " + currentCode[2];
+
+        
 
     }
 }

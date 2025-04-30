@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class doorPivot : MonoBehaviour
 {
-    bool open;
+    public bool open;
+    [SerializeField]string requiredKey;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    public void openDoor()
+    public void openDoor(List<string> items)
     {
         if(open)
         {
@@ -20,9 +21,27 @@ public class doorPivot : MonoBehaviour
         }
         else
         {
-            open = true;
-            Transform parent = transform.parent.transform;
-            parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y+90,parent.localEulerAngles.z);
+            if(requiredKey != null)
+            {
+                foreach(var i in items)
+                {
+                    if (i.Equals(requiredKey))
+                    {
+                        open = true;
+                        gameObject.GetComponent<item>().enabled=false;
+                        Transform parent = transform.parent.transform;
+                        parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y + 90, parent.localEulerAngles.z);
+                    }
+                }
+            }
+            else
+            {
+                open = true;
+                Transform parent = transform.parent.transform;
+                parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y + 90, parent.localEulerAngles.z);
+            }
+        
+            
         }
         
     }

@@ -50,9 +50,19 @@ public class clueManager : MonoBehaviour
     }
     public void interactedWIthItem(item script)
     {
- 
-        itemSeen.Add(script);
-        script.pickedUp();
+        bool tmp = false;
+        foreach(var item in itemsInteracted)
+        {
+            if(item == script.itemID)
+            {
+                tmp= true;
+            }
+        }
+        if (!tmp)
+        {
+            itemsInteracted.Add(script.itemID);
+        }
+        
     }
     // Update is called once per frame
     void Update()

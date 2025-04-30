@@ -1,5 +1,5 @@
 ID;NAME;PROMPT;FIRST TEXT;FOLLOW UP TEXT
-001;O'briens body;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+001;O'briens body;Interact;"Jesus, this is Hugh O’Brien. What happened here?"|TypeShit man lmao lololol;FOLLOW UP TEXT
 002;Knife;Interact;A knife from the kitchen. Was this used on O’Brien?;FOLLOW UP TEXT
 003;Missing Axe;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
 004;O'Briens Injuries;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Burst.CompilerServices;
 
 public class Detection : MonoBehaviour
 {
@@ -51,7 +52,17 @@ public class Detection : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        RaycastHit hits;
+        Ray rays = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+
+        if (Physics.Raycast(rays, out hits) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting)
+        {
+            item script = hits.collider.gameObject.GetComponent<item>();
+            Debug.Log("DisplayingPrompt: " + script.itemName);
+
+            script.displayprompt();
+        }
+            if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)) && !isInteracting ) 
         {
             
             RaycastHit hit;
@@ -65,15 +76,29 @@ public class Detection : MonoBehaviour
                     
                     item script = hit.collider.gameObject.GetComponent<item>();
                     Debug.Log("Interacted with: " + script.itemName) ;
-                    GetComponent<clueManager>().itemsInteracted.Add(script.itemID);
+
+                    GetComponent<clueManager>().interactedWIthItem(script);
                     if (!script.seen)
                     {
+                        script.seen = true;
                         currentText = script.firstInteractionText;
                         currentLine = 0;
-
-                        itemPopup.SetActive(true);
-                        itemDesc.text = currentText[currentLine];
-                        isInteracting = true;
+                        try
+                        {
+                            if( script.gameObject.GetComponent<doorPivot>().open == false)
+                            {
+                                itemPopup.SetActive(true);
+                                itemDesc.text = currentText[currentLine];
+                                isInteracting = true;
+                            }
+                        }
+                        catch
+                        {
+                            itemPopup.SetActive(true);
+                            itemDesc.text = currentText[currentLine];
+                            isInteracting = true;
+                        }
+                        
                     }
                     else
                     {
@@ -105,7 +130,7 @@ public class Detection : MonoBehaviour
                 {
                     doorPivot script = hit.collider.gameObject.GetComponent<doorPivot>();
                     Debug.Log("OpenDoor");
-                    script.openDoor();
+                    script.openDoor(gameObject.GetComponent<clueManager>().itemsInteracted);
 
                 }
             }
@@ -150,6 +175,7 @@ public class Detection : MonoBehaviour
         }
         else
         {
+            ClosePopup();
             if (interactionPromptText.Length > 0)
             {
                 ActivatePrompt();

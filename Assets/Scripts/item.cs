@@ -20,6 +20,8 @@ public class item : MonoBehaviour
 
     gameManager gm;
 
+    float timer;
+    bool displaying;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,21 +33,49 @@ public class item : MonoBehaviour
             {
                 itemName = item[1];
                 interactionPromptText = item[2];
-                firstInteractionText = new string[] { item[3] };
-                followUpText = new string[] { item[4] }; 
+                firstInteractionText = item[3].Split('|');
+                followUpText = item[4].Split('|'); 
 
             }
         }
     }
-    public void displayprompt(bool show)
+    public void displayprompt()
     {
+        timer = Mathf.Clamp(timer+0.3f,0,1);
+    }
+    void checkIfShouldDisplay()
+    {
+        
+        if (!displaying && timer > 0.1f)
+        {
+            displaying = true;
+            try
+            {
+                transform.GetComponentInChildren<Canvas>().gameObject.SetActive(true);
+            }
+            catch {
+                var dpPre = Resources.Load<GameObject>("dpPre");
+                Instantiate(dpPre, transform);
+            }
+        }
+        if (displaying && timer <= 0.1f)
+        {
+            displaying = false;
+            try
+            {
+                transform.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            }
+            catch { }
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer = Mathf.Clamp(timer - 0.01f, 0, 1);
+        Debug.Log(timer);
+        checkIfShouldDisplay();
     }
     public void pickedUp()
     {
