@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
     public List<string[]> cluesCollected;
     public List<string> clueID;
     public List<string[]> itemMasterList;
+    [SerializeField] Image blackScreen;
     public void goToContradiction(clueManager cM)
     {
+
         cluesCollected = cM.cluesWritten;
         clueID = cM.itemsInteracted;
+        StartCoroutine(fadeInBlack(-1));
         SceneManager.LoadScene(2);
         foreach(var clue in cluesCollected[0]) Debug.Log(clue.ToString());
         foreach(var items in clueID) Debug.Log(items.ToString());
@@ -19,7 +24,8 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        blackScreen.gameObject.SetActive(false);
+        StartCoroutine(fadeInBlack(-1));
     }
     private void Awake()
     {
@@ -41,6 +47,42 @@ public class gameManager : MonoBehaviour
             itemMasterList.Add(data);
         }
 
+    }
+    public IEnumerator fadeInBlack(int multiplier)
+    {
+        blackScreen.gameObject.SetActive(true);
+        if(multiplier >= 0)
+        {
+            float tmp = 0f;
+            while (tmp <= 1)
+            {
+                blackScreen.color = new Color(0f, 0f, 0f, tmp);
+                tmp += 0.1f * multiplier;
+                Debug.Log(tmp);
+                yield return new WaitForSeconds(0.05f);
+
+            }
+            blackScreen.color = new Color(0f, 0f, 0f, 1);
+            yield return new WaitForSeconds(1f);
+            yield return fadeInBlack(-1);
+            //yield return null;
+        }
+        else
+        {
+  
+            float tmp = 1f;
+            while (tmp > 0)
+            {
+                blackScreen.color = new Color(0f, 0f, 0f, tmp);
+                tmp += 0.1f * multiplier;
+                yield return new WaitForSeconds(0.05f);
+
+            }
+            blackScreen.color = new Color(0f, 0f, 0f, 0f);
+            blackScreen.gameObject.SetActive(false);
+        }
+        
+        
     }
     // Update is called once per frame
     void Update()

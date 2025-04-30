@@ -43,7 +43,9 @@ public class Detection : MonoBehaviour
     IEnumerator teleportTo(Transform loc)
     {
         gameObject.GetComponent<CharacterController>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(GameObject.FindAnyObjectByType<gameManager>().fadeInBlack(1));
+        yield return new WaitForSeconds(1f);
+
         gameObject.transform.position = loc.position;
         gameObject.GetComponent<CharacterController>().enabled = true;
     }
@@ -88,6 +90,23 @@ public class Detection : MonoBehaviour
                     door script = hit.collider.gameObject.GetComponent<door>();
                     Debug.Log("FoundDoor");
                     StartCoroutine( teleportTo(script.spawnPoint));
+                }
+                if (hit.collider.gameObject.GetComponent<safe>() != null)
+                {
+                    safe script = hit.collider.gameObject.GetComponent<safe>();
+                    Debug.Log("FoundSafe");
+                    if (!script.keypad)
+                    {
+                        script.ShowKeypad();
+                    }
+                    
+                }
+                if (hit.collider.gameObject.GetComponent<doorPivot>() != null)
+                {
+                    doorPivot script = hit.collider.gameObject.GetComponent<doorPivot>();
+                    Debug.Log("OpenDoor");
+                    script.openDoor();
+
                 }
             }
         }

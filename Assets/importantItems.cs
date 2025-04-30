@@ -26,10 +26,15 @@ public class importantItems : MonoBehaviour
         }
         next = true;
         loadPage();
-        Cursor.lockState = CursorLockMode.Confined;
+        
+       
+
+
+    }
+    void Awake()
+    {
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        
-        
     }
     void loadPage()
     {
