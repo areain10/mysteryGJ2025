@@ -81,6 +81,7 @@ public class Detection : MonoBehaviour
                     if (!script.seen)
                     {
                         script.seen = true;
+                        script.pickedUp();
                         currentText = script.firstInteractionText;
                         currentLine = 0;
                         try

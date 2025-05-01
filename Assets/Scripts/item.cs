@@ -22,6 +22,7 @@ public class item : MonoBehaviour
 
     float timer;
     bool displaying;
+    GameObject displayPrompt;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,11 +52,14 @@ public class item : MonoBehaviour
             displaying = true;
             try
             {
-                transform.GetComponentInChildren<Canvas>().gameObject.SetActive(true);
+                displayPrompt.gameObject.SetActive(true);
             }
             catch {
                 var dpPre = Resources.Load<GameObject>("dpPre");
-                Instantiate(dpPre, transform);
+                GameObject go = Instantiate(dpPre);
+                go.transform.parent = transform;
+                go.transform.position = transform.position;
+                displayPrompt = go;
             }
         }
         if (displaying && timer <= 0.1f)
@@ -63,7 +67,7 @@ public class item : MonoBehaviour
             displaying = false;
             try
             {
-                transform.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+                displayPrompt.gameObject.SetActive(false);
             }
             catch { }
         }
@@ -79,6 +83,7 @@ public class item : MonoBehaviour
     }
     public void pickedUp()
     {
-        Destroy(gameObject);
+        timer = 0;
+        //Destroy(gameObject);
     }
 }
