@@ -1,16 +1,22 @@
 ID;NAME;PROMPT;FIRST TEXT;FOLLOW UP TEXT
-001;O'briens body;Interact;"Jesus, this is Hugh O’Brien. What happened here?"|TypeShit man lmao lololol;FOLLOW UP TEXT
-002;Knife;Interact;A knife from the kitchen. Was this used on O’Brien?;FOLLOW UP TEXT
-003;Missing Axe;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-004;O'Briens Injuries;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-005;Keeper's Logbook;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-006;Moore's Journal;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-007;Boat Indent;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-008;Broken Window;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-009;Beach Indent;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-010;Missing Food;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-011;Blood Splatters;Interact;From O’Brien.;FOLLOW UP TEXT
-012;Extra Bedding;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-013;Keeper's Logbook;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-014;Medical Supplies;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
-015;Bible Verses;Interact;"Jesus, this is Hugh O’Brien. What happened here?";FOLLOW UP TEXT
+001;O'briens Body;Interact;Jesus, this is Hugh O’Brien. What happened here?;How did he die?|Maybe the knife he’s holding made these cuts.|Maybe the missing axe made these cuts.
+002;Knife in Hugh’s hand;Interact;A knife from the kitchen. Was this used on O’Brien?;Was it meant for himself, or someone else?|Was he trying to kill Kelly?
+003;Empty axe holder;Interact;It looks like the axe is missing.;It looks like the axe is missing.
+004;O'brien's Injuries;Interact;Seems like it was a cut from a heavy sharp object;Seems like it was a cut from a heavy sharp object
+005;Keeper's Logbook;Read;This must be the logbook;This must be the logbook
+006;Moore's Journal;Read;Probably Jack Moore’s personal journal. Should I read it?;Probably Jack Moore’s personal journal. Should I read it?
+007;BOAT INDENT;Interact;Jesus, this is Hugh O’Brien. What happened here?;Jesus, this is Hugh O’Brien. What happened here?
+008;Broken Window;Interact;Looks like someone fell here.|Did someone hop out of O’Brien’s room through here?;Looks like someone fell here.|Did someone hop out of O’Brien’s room through here?
+009;Beach Indent;Interact;Looks light a row boat was on this beach some time ago;Looks light a row boat was on this beach some time ago
+010;Missing Food;Interact;There was supposed to be enough food for two months. How is it all gone?|How did two men go through it all?;There was supposed to be enough food for two months. How is it all gone?|How did two men go through it all?
+011;Bloodstains;Interact;From O’Brien.;What happened here?|Are these also from O’Brien?|Is some of this from Kelly?
+012;Extra Bedding;Interact;A strange place to store extra bedding.|Did one of the men sleep out here?;A strange place to store extra bedding.|Did one of the men sleep out here?
+013;Keeper's Logbook;Read;The keeper’s logbook. Should I read it?;The keeper’s logbook. Should I read it?
+014;Medical Supplies;Interact;Someone must have gotten badly hurt.|I wonder why they didn’t clean it up?;O’Brien probably didn’t use this.
+015;Bible;Read;O’Brien was a devoted believer.;O’Brien was a devoted believer.
+016;Empty Knife Holder;Interact;Looks like a knife is missing.|The missing knife is in Hugh’s room.;Looks like a knife is missing.|The missing knife is in Hugh’s room.
+017;O'brien's Keys;Pickup;O’Brien’s key set. Did he lock himself inside?|Did O’Brien lock himself in here?|Why would they leave the keys inside?;O’Brien’s key set. Did he lock himself inside?|Did O’Brien lock himself in here?|Why would they leave the keys inside?
+018;Jack’s room key;Pickup;A key. It probably fits to a lock somewhere around here.;A key. It probably fits to a lock somewhere around here.
+019;Moore's bed;Interact;Moore’s bed. It looks almost broken, the way it’s sagging.| Did O'brien sleep in the bed with Moore?;Moore’s bed. It looks almost broken, the way it’s sagging.| Did O'brien sleep in the bed with Moore?
+020;Whittled Fox and Tools;Interact;Someone must have made this here. It’s very intricately done.|Moore was known to have a heavy hand. This suggests otherwise.;
+021;Lighthouse note;Read;A number code to something.|This could be the code to the safe.|The code to the safe.;A number code to something.|This could be the code to the safe.|The code to the safe.

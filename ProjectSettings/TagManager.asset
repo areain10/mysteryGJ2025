@@ -9,6 +9,7 @@ TagManager:
   - npbuttons
   - notepad
   - uiCam
+  - readingUIgo
   layers:
   - Default
   - TransparentFX

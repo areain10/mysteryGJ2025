@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,13 @@ public class item : MonoBehaviour
     [HideInInspector] public string interactionPromptText;
 
     public bool seen = false;
-
+    bool canPickedUp;
     gameManager gm;
 
     float timer;
     bool displaying;
     GameObject displayPrompt;
-    // Start is called before the first frame update
+        // Start is called before the first frame update
     void Start()
     {
         gm= GameObject.FindAnyObjectByType<gameManager>();
@@ -34,6 +35,7 @@ public class item : MonoBehaviour
             {
                 itemName = item[1];
                 interactionPromptText = item[2];
+                canPickedUp = interactionPromptText[0].ToString().ToLower() == "p";
                 firstInteractionText = item[3].Split('|');
                 followUpText = item[4].Split('|'); 
 
@@ -84,6 +86,10 @@ public class item : MonoBehaviour
     public void pickedUp()
     {
         timer = 0;
-        //Destroy(gameObject);
+        if(canPickedUp)
+        {
+            Destroy(gameObject);
+
+        }
     }
 }

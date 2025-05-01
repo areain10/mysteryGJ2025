@@ -27,11 +27,12 @@ public class Detection : MonoBehaviour
 
     private string[] currentText;
     private bool isPromptActive = false;
-
+    readingManager readingManager;
     void Start()
     {
         
-
+        readingManager = FindAnyObjectByType<readingManager>();
+        readingManager.gameObject.SetActive(false);
         if (itemPopup != null)
         {
             itemDesc = itemPopup.GetComponentInChildren<TextMeshProUGUI>();
@@ -126,6 +127,15 @@ public class Detection : MonoBehaviour
                         script.ShowKeypad();
                     }
                     
+                }
+                if (hit.collider.gameObject.GetComponent<readable>() != null)
+                {
+                    readable script = hit.collider.gameObject.GetComponent<readable>();
+                    readingManager.gameObject.SetActive(true);
+                    readingManager.load(script.passages,script.background);
+                    //Debug.Log();
+                    
+
                 }
                 if (hit.collider.gameObject.GetComponent<doorPivot>() != null)
                 {
