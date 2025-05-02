@@ -28,9 +28,10 @@ public class Detection : MonoBehaviour
     private string[] currentText;
     private bool isPromptActive = false;
     readingManager readingManager;
+    public readable currentReading;
     void Start()
     {
-        
+        currentReading = null;
         readingManager = FindAnyObjectByType<readingManager>();
         readingManager.gameObject.SetActive(false);
         if (itemPopup != null)
@@ -74,7 +75,7 @@ public class Detection : MonoBehaviour
                 
                 if (hit.collider.gameObject.GetComponent<item>() != null) 
                 {
-                    
+                    isInteracting = true;
                     item script = hit.collider.gameObject.GetComponent<item>();
                     Debug.Log("Interacted with: " + script.itemName) ;
 
@@ -131,8 +132,8 @@ public class Detection : MonoBehaviour
                 if (hit.collider.gameObject.GetComponent<readable>() != null)
                 {
                     readable script = hit.collider.gameObject.GetComponent<readable>();
-                    readingManager.gameObject.SetActive(true);
-                    readingManager.load(script.passages,script.background);
+                    currentReading = script;
+                    
                     //Debug.Log();
                     
 
@@ -159,6 +160,11 @@ public class Detection : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     ClosePopup();
+                    if(currentReading != null)
+                    {
+                        readingManager.gameObject.SetActive(true);
+                        readingManager.load(currentReading.passages, currentReading.background);
+                    }
                 }
             }
             else
@@ -170,7 +176,14 @@ public class Detection : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
+
                     ClosePopup();
+                    if (currentReading != null)
+                    {
+                        readingManager.gameObject.SetActive(true);
+                        readingManager.load(currentReading.passages, currentReading.background);
+                    }
+
                 }
             }
         }
@@ -193,6 +206,11 @@ public class Detection : MonoBehaviour
             }
             else
             {
+                if (currentReading != null)
+                {
+                    readingManager.gameObject.SetActive(true);
+                    readingManager.load(currentReading.passages, currentReading.background);
+                }
                 ClosePopup();
             }
         }

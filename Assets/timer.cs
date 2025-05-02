@@ -11,7 +11,7 @@ public class timer : MonoBehaviour
     }
     IEnumerator startTimer()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(3600);
         gameObject.GetComponent<gameManager>().goToContradiction(GameObject.FindAnyObjectByType<clueManager>());
     }
     // Update is called once per frame

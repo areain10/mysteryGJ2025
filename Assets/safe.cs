@@ -72,8 +72,9 @@ public class safe : MonoBehaviour
     {
         if(keypad) 
         { 
-            if(Input.GetKeyUp(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(1))
             {
+
                 ShowKeypad();
             }
             codeText.text = currentCode[0] + " " + currentCode[1] + " " + currentCode[2];
