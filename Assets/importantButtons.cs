@@ -9,11 +9,13 @@ public class importantButtons : MonoBehaviour
 {
     importantItems iiManager;
     public string ItemID;
+
     // Start is called before the first frame update
     void Start()
     {
         //ItemID = Random.Range(0,100).ToString();
         iiManager = GameObject.FindAnyObjectByType<importantItems>();
+        GetComponent<Image>().sprite = Resources.Load<Sprite>("button");
     }
     public void instantiationOfButton(string id)
     {
@@ -53,7 +55,7 @@ public class importantButtons : MonoBehaviour
         if (iiManager.importantItemsFinalList.Contains(ItemID))
         {
             iiManager.importantItemsFinalList.Remove(ItemID);
-            GetComponent<Image>().color = Color.white;
+            GetComponent<Image>().sprite = Resources.Load<Sprite>("button");
 
         }
         else
@@ -61,7 +63,7 @@ public class importantButtons : MonoBehaviour
             if(iiManager.importantItemsFinalList.Count < 7)
             {
                 iiManager.importantItemsFinalList.Add(ItemID);
-                GetComponent<Image>().color = Color.green;
+                GetComponent<Image>().sprite = Resources.Load<Sprite>("clicked");
             }
             
         }
@@ -70,6 +72,15 @@ public class importantButtons : MonoBehaviour
     {
         casefilewriter writer = GameObject.FindAnyObjectByType<casefilewriter>();
         writer.currentSelectedEvidence = ItemID;
+
+        casefileButtons[] tmp = FindObjectsByType<casefileButtons>(FindObjectsSortMode.None);
+        foreach (var buttons in tmp)
+        {
+            buttons.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("button");
+
+        }
+        gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("clicked");
+
 
     }
     // Update is called once per frame

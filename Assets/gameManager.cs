@@ -10,6 +10,7 @@ public class gameManager : MonoBehaviour
     public List<string[]> cluesCollected;
     public List<string> clueID;
     public List<string[]> itemMasterList;
+   
     [SerializeField] Image blackScreen;
     public void goToContradiction(clueManager cM)
     {
@@ -24,8 +25,14 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        blackScreen.gameObject.SetActive(false);
-        StartCoroutine(fadeInBlack(-1));
+
+        
+        if(GameObject.FindGameObjectsWithTag("gameManager").Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        //blackScreen.gameObject.SetActive(false);
+        //StartCoroutine(fadeInBlack(-1));
     }
     private void Awake()
     {

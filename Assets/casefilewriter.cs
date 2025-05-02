@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class casefilewriter : MonoBehaviour
 {
@@ -20,9 +22,11 @@ public class casefilewriter : MonoBehaviour
     string[] listOfNeeded;
     Color textColor;
     int pressedOption;
+    int finalScore;
     // Start is called before the first frame update
     void Start()
     {
+        finalScore = 0;
         /*writing = new List<string[]>
         {
             new string[] { "000 O’Brien",
@@ -71,6 +75,7 @@ public class casefilewriter : MonoBehaviour
  
     IEnumerator loadNextLine(int lineNumber,bool includeClue)
     {
+
         optionsTextBox.transform.parent.gameObject.SetActive(false);
         currentwriting = lineNumber;
         string tmp = writing[currentwriting][2].Replace("\\n", "\n") + " ";
@@ -82,6 +87,7 @@ public class casefilewriter : MonoBehaviour
         }
         if(includeClue)
         {
+
             string clue = GameObject.FindAnyObjectByType<gameManager>().itemMasterList[Int32.Parse(currentSelectedEvidence)-1][1];
             caseTextBox.text += "(";
             foreach (char c in clue)
@@ -91,9 +97,15 @@ public class casefilewriter : MonoBehaviour
             }
             caseTextBox.text += ")";
             currentSelectedEvidence = "";
+            
             pressedOption = -1;
         }
+        casefileButtons[] tmps = FindObjectsByType<casefileButtons>(FindObjectsSortMode.None);
+        foreach (var buttons in tmps)
+        {
+            buttons.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("button");
 
+        }
         displayOptions(writing[currentwriting][3].Split('|'));
        
     }
@@ -134,7 +146,7 @@ public class casefilewriter : MonoBehaviour
             }
             catch
             {
-                Debug.Log("Game End");
+                Debug.Log("Game End\n Final SCore:"+finalScore);
             }
             
             
@@ -182,6 +194,15 @@ public class casefilewriter : MonoBehaviour
         }
         else if (currentSelectedEvidence!="")
         {
+            foreach(var x in writing[Int32.Parse(currentOption[option - 1])][1].Split('|'))
+            {
+                Debug.Log(x+"            "+currentSelectedEvidence);
+            }
+            if (writing[Int32.Parse(currentOption[option - 1])][1].Split('|').ToList().Contains(currentSelectedEvidence))
+            {
+                Debug.Log("YOU GOT IT RIGHT");
+                finalScore += 1;
+            }
             StartCoroutine(loadNextLine(Int32.Parse(currentOption[option - 1]),true));
         }
         
