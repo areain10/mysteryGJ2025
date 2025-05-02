@@ -25,6 +25,7 @@ public class safe : MonoBehaviour
         if(keypad)
         {
             GameObject.FindAnyObjectByType<clueManager>().notepad = false;
+            GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             keypad = false;
@@ -33,6 +34,7 @@ public class safe : MonoBehaviour
         else
         {
             GameObject.FindAnyObjectByType<clueManager>().notepad = true;
+            GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             keypad = true;
             currentCode = new List<int>() { 0,0,0};
             Cursor.visible = true;

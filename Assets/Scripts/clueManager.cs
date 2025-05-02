@@ -80,7 +80,12 @@ public class clueManager : MonoBehaviour
             gm.goToContradiction(gameObject.GetComponent<clueManager>());
             
         }
-        
+        if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) && notepad)
+        {
+            toggleNotePad(false);
+
+        }
+        /*
         if (notepad)
         {
             if(pageNum == -1)
@@ -153,7 +158,7 @@ public class clueManager : MonoBehaviour
                 }
             }
             
-        }
+        }*/
         /*if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit hit;
@@ -183,15 +188,7 @@ public class clueManager : MonoBehaviour
             
             if (notepad)
             {
-               
-                if(cluesWritten.Count > 0)
-                {
-                    pageNum = 0;
-                }
-                else
-                {
-                    pageNum = -1;
-                }
+             
                 
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             }
@@ -205,5 +202,16 @@ public class clueManager : MonoBehaviour
 
         }
 
+    }
+    public void toggleNotePad(bool newVal)
+    {
+        notepad = newVal;
+        switch (newVal)
+        {
+            case true: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;GetComponent<Detection>().isInteracting = true;
+                break;
+            case false: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; GetComponent<Detection>().isInteracting = false;
+                break;
+        }
     }
 }

@@ -22,15 +22,17 @@ public class Detection : MonoBehaviour
     [SerializeField] private string interactionPromptText;
 
     private int currentLine = 0;
-    private bool isInteracting = false;
+    public bool isInteracting = false;
     private bool seen = false; 
 
     private string[] currentText;
     private bool isPromptActive = false;
     readingManager readingManager;
     public readable currentReading;
+    bool canNextLine;
     void Start()
     {
+        currentLine= 0;
         currentReading = null;
         readingManager = FindAnyObjectByType<readingManager>();
         readingManager.gameObject.SetActive(false);
@@ -39,7 +41,7 @@ public class Detection : MonoBehaviour
             itemDesc = itemPopup.GetComponentInChildren<TextMeshProUGUI>();
             itemPopup.SetActive(false);
         }
-
+        canNextLine = false;
        // var col = renderer.material.color;
         //col.a = 1f;
     }
@@ -52,12 +54,42 @@ public class Detection : MonoBehaviour
         gameObject.transform.position = loc.position;
         gameObject.GetComponent<CharacterController>().enabled = true;
     }
+    void LoadInteractionText(string[] texts)
+    {
+        
+        currentText = texts;
+        Debug.Log(currentLine + "  " + currentText.Length);
+        if(currentLine>=currentText.Length)
+        {
+            Debug.Log("Show interaction text");
+            ClosePopup();
+        }
+        else
+        {
+            itemPopup.SetActive(true);
+            canNextLine = false;
+            StartCoroutine(writeOutInteractionBox(currentText[currentLine]));
+            //itemDesc.text = currentText[currentLine];
+
+        }
+    }
+    IEnumerator writeOutInteractionBox(string text)
+    {
+        itemDesc.text = "";
+        foreach (char c in text)
+        {
+            
+            itemDesc.text+= c;
+            yield return new WaitForSeconds(0.02f);
+        }
+        canNextLine = true;
+    }
     void Update()
     {
         RaycastHit hits;
         Ray rays = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
-        if (Physics.Raycast(rays, out hits) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting)
+        if (Physics.Raycast(rays, out hits,3f) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting)
         {
             item script = hits.collider.gameObject.GetComponent<item>();
             Debug.Log("DisplayingPrompt: " + script.itemName);
@@ -70,7 +102,7 @@ public class Detection : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f,0));
 
-            if (Physics.Raycast(ray, out hit)) 
+            if (Physics.Raycast(ray, out hit,3f)) 
             {
                 
                 if (hit.collider.gameObject.GetComponent<item>() != null) 
@@ -84,33 +116,35 @@ public class Detection : MonoBehaviour
                     {
                         script.seen = true;
                         script.pickedUp();
-                        currentText = script.firstInteractionText;
-                        currentLine = 0;
+                        isInteracting = true;
                         try
                         {
                             if( script.gameObject.GetComponent<doorPivot>().open == false)
                             {
-                                itemPopup.SetActive(true);
-                                itemDesc.text = currentText[currentLine];
-                                isInteracting = true;
+                                LoadInteractionText(script.firstInteractionText);
                             }
                         }
                         catch
                         {
-                            itemPopup.SetActive(true);
-                            itemDesc.text = currentText[currentLine];
-                            isInteracting = true;
+                            LoadInteractionText(script.firstInteractionText);
                         }
                         
                     }
                     else
                     {
-                        currentText = script.followUpText;
-                        currentLine = 0;
-
-                        itemPopup.SetActive(true);
-                        itemDesc.text = currentText[currentLine];
-                        isInteracting = true;
+                        try
+                        {
+                            if (script.gameObject.GetComponent<doorPivot>().open == false)
+                            {
+                                LoadInteractionText(script.followUpText);
+                            }
+                        }
+                        catch
+                        {
+                            LoadInteractionText(script.followUpText);
+                        }
+                        
+                       
                     }
                 }
                 if (hit.collider.gameObject.GetComponent<door>() != null)
@@ -148,95 +182,28 @@ public class Detection : MonoBehaviour
             }
         }
 
-        if (isInteracting && itemPopup.activeSelf)
+        if (isInteracting && itemPopup.activeSelf && Input.GetKeyDown(KeyCode.E) && canNextLine)
         {
-            if (isPromptActive)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    InteractWithObject(); 
-                }
-
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    ClosePopup();
-                    if(currentReading != null)
-                    {
-                        readingManager.gameObject.SetActive(true);
-                        readingManager.load(currentReading.passages, currentReading.background);
-                    }
-                }
-            }
-            else
-            {
-                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
-                {
-                    Continue(); 
-                }
-
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-
-                    ClosePopup();
-                    if (currentReading != null)
-                    {
-                        readingManager.gameObject.SetActive(true);
-                        readingManager.load(currentReading.passages, currentReading.background);
-                    }
-
-                }
-            }
+            currentLine++;
+            LoadInteractionText(currentText);
         }
     }
 
-    private void Continue()
-    {
-        currentLine++;
-
-        if (currentLine < currentText.Length)
-        {
-            itemDesc.text = currentText[currentLine];
-        }
-        else
-        {
-            ClosePopup();
-            if (interactionPromptText.Length > 0)
-            {
-                ActivatePrompt();
-            }
-            else
-            {
-                if (currentReading != null)
-                {
-                    readingManager.gameObject.SetActive(true);
-                    readingManager.load(currentReading.passages, currentReading.background);
-                }
-                ClosePopup();
-            }
-        }
-    }
-
-    private void ActivatePrompt()
-    {
-        if (!string.IsNullOrEmpty(interactionPromptText))
-        {
-            itemDesc.text = interactionPromptText;
-        }
-        isPromptActive = true;
-    }
-
-    private void InteractWithObject()
-    {
-        Debug.Log("You have interacted with the object!"); 
-        ClosePopup();
-    }
 
     private void ClosePopup()
     {
+        if (currentReading != null)
+        {
+            readingManager.gameObject.SetActive(true);
+            isInteracting = true;
+            GetComponent<clueManager>().toggleNotePad(true);
+            readingManager.load(currentReading.passages, currentReading.background);
+        }
         itemPopup.SetActive(false);
         isInteracting = false;
         isPromptActive = false;
-        seen = true; 
+        seen = true;
+        currentLine = 0;
     }
 
     void OnMouseEnter()

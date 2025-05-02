@@ -80,7 +80,7 @@ public class item : MonoBehaviour
     void Update()
     {
         timer = Mathf.Clamp(timer - 0.01f, 0, 1);
-        Debug.Log(timer);
+        //Debug.Log(timer);
         checkIfShouldDisplay();
     }
     public void pickedUp()
