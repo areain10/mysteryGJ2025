@@ -1,22 +1,30 @@
 ID;NAME;PROMPT;FIRST TEXT;FOLLOW UP TEXT
-001;O'briens Body;Interact;Jesus, this is Hugh O’Brien. What happened here?;How did he die?|Maybe the knife he’s holding made these cuts.|Maybe the missing axe made these cuts.
+001;O'Briens Body;Interact;Jesus, this is Hugh O’Brien. What happened here?;How did he die?|Maybe the knife he’s holding made these cuts.|Maybe the missing axe made these cuts.
 002;Knife in Hugh’s hand;Interact;A knife from the kitchen. Was this used on O’Brien?;Was it meant for himself, or someone else?|Was he trying to kill Kelly?
-003;Empty axe holder;Interact;It looks like the axe is missing.;It looks like the axe is missing.
-004;O'brien's Injuries;Interact;Seems like it was a cut from a heavy sharp object;Seems like it was a cut from a heavy sharp object
-005;Keeper's Logbook;Read;This must be the logbook;This must be the logbook
-006;Moore's Journal;Read;Probably Jack Moore’s personal journal. Should I read it?;Probably Jack Moore’s personal journal. Should I read it?
-007;BOAT INDENT;Interact;Jesus, this is Hugh O’Brien. What happened here?;Jesus, this is Hugh O’Brien. What happened here?
-008;Broken Window;Interact;Looks like someone fell here.|Did someone hop out of O’Brien’s room through here?;Looks like someone fell here.|Did someone hop out of O’Brien’s room through here?
-009;Beach Indent;Interact;Looks light a row boat was on this beach some time ago;Looks light a row boat was on this beach some time ago
-010;Missing Food;Interact;There was supposed to be enough food for two months. How is it all gone?|How did two men go through it all?;There was supposed to be enough food for two months. How is it all gone?|How did two men go through it all?
-011;Bloodstains;Interact;From O’Brien.;What happened here?|Are these also from O’Brien?|Is some of this from Kelly?
-012;Extra Bedding;Interact;A strange place to store extra bedding.|Did one of the men sleep out here?;A strange place to store extra bedding.|Did one of the men sleep out here?
+003;Empty axe holder;Interact;This usually holds the axe. I wonder where it is?;The axe is missing.
+004;O'Brien's Injuries;Interact;Looks like a deep cut.;He looks to have been cut by a heavy, sharp object.
+005;Keeper's Logbook;Read;This must be the keeper's logbook. Should I read it?;The keeper’s logbook. Should I read it?
+006;Moore's Journal;Read;Probably Jack Moore’s personal journal. Should I read it?;Jack Moore’s personal journal. Should I read it?
+007;Crushed plants;Interact;Looks like something heavy fell on these plants.|Is this connected to the broken window?;These plants are crushed, probably under the weight of something heavy.|Did someone hop out of O'Brien's broken window?
+008;Broken Window;Interact;The window is broken.|Did someone hop out of O’Brien’s room through here?;A broken window. I'll probably have to report it.|Did someone hop out of O’Brien’s room through here?
+009;Beach Indent;Interact;Looks like a small boat landed here.|Was this where the third man landed?;A small boat must have landed here. I wonder where it is now?|Was the boat taken to leave the island?
+010;Missing Food;Interact;There was supposed to be enough food for two months. How is it all gone?;How did two men go through all the food?
+011;Bloodstains;Interact;What happened here?|Is all of this from O'Brien?;There's a lot of blood.|Probably from O'Brien.|Is some of this from Kelly?
+012;Extra Bedding;Interact;A strange place to store extra bedding.;Did one of the men sleep out here?
 013;Keeper's Logbook;Read;The keeper’s logbook. Should I read it?;The keeper’s logbook. Should I read it?
-014;Medical Supplies;Interact;Someone must have gotten badly hurt.|I wonder why they didn’t clean it up?;O’Brien probably didn’t use this.
+014;Medical Supplies;Interact;Someone must have gotten hurt. I wonder why they left it out?;O’Brien probably didn’t use this.
 015;Bible;Read;O’Brien was a devoted believer.;O’Brien was a devoted believer.
-016;Empty Knife Holder;Interact;Looks like a knife is missing.|The missing knife is in Hugh’s room.;Looks like a knife is missing.|The missing knife is in Hugh’s room.
-017;O'brien's Keys;Pickup;O’Brien’s key set. Did he lock himself inside?|Did O’Brien lock himself in here?|Why would they leave the keys inside?;O’Brien’s key set. Did he lock himself inside?|Did O’Brien lock himself in here?|Why would they leave the keys inside?
+016;Empty Knife Holder;Interact;Looks like a knife is missing.|The knife in Hugh's room must be the one missing from here.;A knife is missing.|The missing knife is in Hugh’s room.
+017;O'Brien's Keys;Pickup;O’Brien’s key set. Did he lock himself inside here?;Did O'Brien lock himself inside? Why? |Why would they leave the keys inside?
 018;Jack’s room key;Pickup;A key. It probably fits to a lock somewhere around here.;A key. It probably fits to a lock somewhere around here.
-019;Moore's bed;Interact;Moore’s bed. It looks almost broken, the way it’s sagging.| Did O'brien sleep in the bed with Moore?;Moore’s bed. It looks almost broken, the way it’s sagging.| Did O'brien sleep in the bed with Moore?
-020;Whittled Fox and Tools;Interact;Someone must have made this here. It’s very intricately done.|Moore was known to have a heavy hand. This suggests otherwise.;
-021;Lighthouse note;Read;A number code to something.|This could be the code to the safe.|The code to the safe.;A number code to something.|This could be the code to the safe.|The code to the safe.
+019;Moore's bed;Interact;Moore’s bed. It looks almost broken, the way it’s sagging.| Was Moore really the only one to do this damage?;Could one man sleeping cause the bed to sag this way?
+020;Whittle;Interact;Someone left a whittle here.|Maybe this belonged to the third man staying here.;O'Brien and Moore were known to have heavy hands. | Was this left behind by someone else?
+021;Lighthouse note;Read;A series of numbers.|The code to the safe.;Is this a code to something?|The code to the safe.
+022;Jack's Room Door;Interact;This door is locked.;Door
+023;Washbasin;Interact;A washbasin. It looks like there's blood in it.;Why would there be blood in here? Who was washing up?
+024;Coatrack;Interact;A coatrack with one coat on it.|Must be O'Brien's coat.;Someone left his coat behind.|Probably O'Brien's coat.
+025;Crate;Interact;A crate with spare glass for the lighthouse.;A crate with spare glass for the lighthouse.
+026;Rope;Interact;Some rope, for whatever they might need.;Rope, for boats and the lighthouse.
+027;Woodpile;Interact;Some chopped wood, usually used for the oven.;A pile of chopped wood.
+028;Log;Interact;A log used for chopping firewood.;The men chop firewood here.
+029;Pot;Interact;A cooking pot.;There's still some food stuck to the bottom of this pot.

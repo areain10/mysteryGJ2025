@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
         cc.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        cam.gameObject.transform.localPosition = new Vector3(0,1,-0.5f);
     }
     private void Update()
     {

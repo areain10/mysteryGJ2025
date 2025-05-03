@@ -8,13 +8,16 @@ public class dpCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindAnyObjectByType<clueManager>().gameObject;
+        transform.localEulerAngles = Vector3.zero;
+        player = GameObject.FindGameObjectWithTag("uiCam").GetComponent<Camera>().gameObject;
         gameObject.GetComponent<Canvas>().worldCamera = GameObject.FindGameObjectWithTag("uiCam").GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        //transform.localScale = new Vector3(0.2f,0.2f,0.2f);
         transform.LookAt(player.transform.position);
     }
 }
