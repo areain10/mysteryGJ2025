@@ -13,6 +13,7 @@ public class casefilewriter : MonoBehaviour
     [SerializeField] List<string[]> writing;
     [SerializeField] GameObject ContainerGO;
     [SerializeField] GameObject ItemButtonPrefab;
+    [SerializeField] GameObject OptionsButtonPrefab;
     public List<string> importantID;
     int currentwriting;
     bool canchoose;
@@ -112,6 +113,10 @@ public class casefilewriter : MonoBehaviour
 
     void displayOptions(string[] currentOptions)
     {
+        foreach (var x in optionsTextBox.transform.parent.GetComponentsInChildren<optionsButton>())
+        {
+            Destroy(x.gameObject);
+        }
         textColor = Color.black;
         optionsTextBox.transform.parent.gameObject.SetActive(true);
         currentOption = currentOptions;
@@ -128,19 +133,24 @@ public class casefilewriter : MonoBehaviour
                 {
                     numOfOptions++;
                     optionsTextBox.color = Color.black;
+                    string tmp;
                     Debug.Log(writing[Int32.Parse(currentOptions[i])][1].Split('|')[0] + ":" + writing[Int32.Parse(currentOptions[i])][1].Split('|')[0] + "  " + (writing[Int32.Parse(currentOptions[i])][1].Split('|')[0] != "000"));
                     if (writing[Int32.Parse(currentOptions[i])][1].Split('|')[0] != "000")
                     {
                         
-                        optionsTextBox.text += "<color=yellow>"+(numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "<color=yellow>" +"\n";
+                        tmp = "<color=yellow>"+(numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "<color=yellow>" +"\n";
                     }
                     else
                     {
-                        optionsTextBox.text += (numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "\n";
+                        tmp= (numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "\n";
 
                     }
-
-                    
+                    GameObject go = Instantiate(OptionsButtonPrefab,optionsTextBox.transform.parent);
+                    //GameObject go = Instantiate(ItemButtonPrefab);
+                    go.GetComponentInChildren<TextMeshProUGUI>().text = tmp;
+                    go.GetComponentInChildren<optionsButton>().num = numOfOptions;
+                    go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (100 * (i-1)), go.transform.position.z);
+                    //go.transform.SetParent(ContainerGO.transform, false);
                     //optionsTextBox.color = Color.black;
                 }
             }
@@ -178,10 +188,11 @@ public class casefilewriter : MonoBehaviour
         }
         return tmp;
     }
-    void chooseOption(int option)
+    public void chooseOption(int option)
     {
         pressedOption = option;
         checkIfShouldDisplay(writing[Int32.Parse(currentOption[option - 1])]);
+        
         string[] tmp = writing[Int32.Parse(currentOption[option - 1])][1].Split('|');
         foreach (var c in tmp)
         {
@@ -218,7 +229,7 @@ public class casefilewriter : MonoBehaviour
             {
                 if (Input.GetKeyDown((KeyCode)(48 + i)))
                 {
-                    chooseOption(i);
+                    //chooseOption(i);
                 }
             }
         }

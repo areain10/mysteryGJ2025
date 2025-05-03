@@ -55,7 +55,7 @@ public class importantItems : MonoBehaviour
             {
                 GameObject go = Instantiate(ItemButtonPrefab);
                 go.GetComponent<importantButtons>().instantiationOfButton(itemsID[((pageNum - 1) * 9) + i]);
-                go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (80 * i), go.transform.position.z);
+                go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (70 * i), go.transform.position.z);
                 go.transform.SetParent(ContainerGO.transform, false);
             }
         }
@@ -106,7 +106,7 @@ public class importantItems : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.O))
         {
-            importantItemsSelected();
+            //importantItemsSelected();
         }
     }
 }
