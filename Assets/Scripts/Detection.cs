@@ -30,6 +30,7 @@ public class Detection : MonoBehaviour
     readingManager readingManager;
     public readable currentReading;
     bool canNextLine;
+    float continueTimer;
     void Start()
     {
         currentLine= 0;
@@ -82,7 +83,15 @@ public class Detection : MonoBehaviour
             itemDesc.text+= c;
             yield return new WaitForSeconds(0.02f);
         }
+        
         canNextLine = true;
+        yield return new WaitForSeconds(2f);
+        canNextLine = false;
+        currentLine++;
+        LoadInteractionText(currentText);
+        
+
+
     }
     void Update()
     {

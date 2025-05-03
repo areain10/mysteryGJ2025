@@ -14,7 +14,12 @@ public class doorPivot : MonoBehaviour
     }
     public void openDoor(List<string> items)
     {
-       
+            if (open)
+            {
+                open = false;
+                Transform parent = transform.parent.transform;
+                parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y - 90, parent.localEulerAngles.z);
+            }
             if(requiredKey != null)
             {
                
@@ -25,6 +30,7 @@ public class doorPivot : MonoBehaviour
                             open = true;
                             unlocked = true;
                             gameObject.GetComponent<item>().enabled = false;
+                            Destroy(gameObject.transform.GetChild(0).gameObject);
                             Transform parent = transform.parent.transform;
                             parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y + 90, parent.localEulerAngles.z);
                         }
