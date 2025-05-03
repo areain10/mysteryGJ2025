@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class casefilewriter : MonoBehaviour
@@ -81,7 +82,10 @@ public class casefilewriter : MonoBehaviour
         currentwriting = lineNumber;
         string tmp = writing[currentwriting][2].Replace("\\n", "\n") + " ";
         canchoose = false;
-        foreach(char c in tmp)
+        
+ 
+        
+            foreach (char c in tmp)
         {
             caseTextBox.text += c;
             yield return new WaitForSeconds(0.02f);
@@ -107,7 +111,16 @@ public class casefilewriter : MonoBehaviour
             buttons.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("button");
 
         }
-        displayOptions(writing[currentwriting][3].Split('|'));
+        if (writing[currentwriting][3].Split('|')[0] == "999")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            yield return null;
+        }
+        else
+        {
+            displayOptions(writing[currentwriting][3].Split('|'));
+        }
+        
        
     }
 
@@ -156,7 +169,8 @@ public class casefilewriter : MonoBehaviour
             }
             catch
             {
-                Debug.Log("Game End\n Final SCore:"+finalScore);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
             }
             
             
@@ -199,7 +213,7 @@ public class casefilewriter : MonoBehaviour
             //Debug.Log(c);
         }
         Debug.Log(writing[Int32.Parse(currentOption[option - 1])][1].Split('|')[0]);
-        if (Int32.Parse(writing[Int32.Parse(currentOption[option - 1])][1].Split('|')[0]) == 0 || writing[Int32.Parse(currentOption[option - 1])][1].Split('|').Length != 1)
+        if (Int32.Parse(writing[Int32.Parse(currentOption[option - 1])][1].Split('|')[0]) == 0)
         {
             StartCoroutine(loadNextLine(Int32.Parse(currentOption[option - 1]),false));
         }
@@ -212,7 +226,8 @@ public class casefilewriter : MonoBehaviour
             if (writing[Int32.Parse(currentOption[option - 1])][1].Split('|').ToList().Contains(currentSelectedEvidence))
             {
                 Debug.Log("YOU GOT IT RIGHT");
-                finalScore += 1;
+                FindAnyObjectByType<gameManager>().finalScores += 1;
+
             }
             StartCoroutine(loadNextLine(Int32.Parse(currentOption[option - 1]),true));
         }

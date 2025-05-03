@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/contradiction.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/ending.unity
+    guid: 91e89da896af0354bb99748ded5e5bd4
   m_configObjects: {}

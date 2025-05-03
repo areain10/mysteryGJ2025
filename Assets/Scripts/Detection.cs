@@ -98,7 +98,7 @@ public class Detection : MonoBehaviour
         RaycastHit hits;
         Ray rays = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
-        if (Physics.Raycast(rays, out hits,3f) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting)
+        if (Physics.Raycast(rays, out hits,3f) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting && !readingManager.reading)
         {
             item script = hits.collider.gameObject.GetComponent<item>();
             Debug.Log("DisplayingPrompt: " + script.itemName);
@@ -207,6 +207,7 @@ public class Detection : MonoBehaviour
             isInteracting = true;
             GetComponent<clueManager>().toggleNotePad(true);
             readingManager.load(currentReading.passages, currentReading.background);
+
         }
         itemPopup.SetActive(false);
         isInteracting = false;

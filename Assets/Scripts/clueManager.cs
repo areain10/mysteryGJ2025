@@ -208,10 +208,11 @@ public class clueManager : MonoBehaviour
         notepad = newVal;
         switch (newVal)
         {
-            case true: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;GetComponent<Detection>().isInteracting = true;
+            case true: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;GetComponent<Detection>().isInteracting = true;Cursor.lockState = CursorLockMode.Confined;Cursor.visible=true ;
                 break;
-            case false: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; GetComponent<Detection>().isInteracting = false;
+            case false: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; GetComponent<Detection>().isInteracting = false; Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false;
                 break;
+                
         }
     }
 }

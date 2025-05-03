@@ -60,7 +60,7 @@ public class importantButtons : MonoBehaviour
         }
         else
         {
-            if(iiManager.importantItemsFinalList.Count < 7)
+            if(iiManager.importantItemsFinalList.Count < 9)
             {
                 iiManager.importantItemsFinalList.Add(ItemID);
                 GetComponent<Image>().sprite = Resources.Load<Sprite>("clicked");

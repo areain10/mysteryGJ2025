@@ -10,7 +10,7 @@ public class gameManager : MonoBehaviour
     public List<string[]> cluesCollected;
     public List<string> clueID;
     public List<string[]> itemMasterList;
-   
+    public int finalScores;
     [SerializeField] Image blackScreen;
     public void goToContradiction(clueManager cM)
     {
