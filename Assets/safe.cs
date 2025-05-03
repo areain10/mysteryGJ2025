@@ -24,8 +24,10 @@ public class safe : MonoBehaviour
     {
         if(keypad)
         {
-            GameObject.FindAnyObjectByType<clueManager>().notepad = false;
-            GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.FindAnyObjectByType<clueManager>().toggleNotePad(false);
+            //GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.FindAnyObjectByType<PlayerController>().isCrouching = false;
+            GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position = new Vector3(GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position.x, GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position.y + 3, GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position.z);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             keypad = false;
@@ -33,8 +35,9 @@ public class safe : MonoBehaviour
         }
         else
         {
-            GameObject.FindAnyObjectByType<clueManager>().notepad = true;
-            GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            GameObject.FindAnyObjectByType<clueManager>().toggleNotePad(true);
+
+            //GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             keypad = true;
             currentCode = new List<int>() { 0,0,0};
             Cursor.visible = true;
@@ -67,6 +70,7 @@ public class safe : MonoBehaviour
     {
         ShowKeypad();
         gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<MeshCollider>().enabled = false;
         openSprite.SetActive(true) ;
     }
     // Update is called once per frame

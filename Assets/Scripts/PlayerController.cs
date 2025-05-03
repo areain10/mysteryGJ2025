@@ -14,14 +14,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 crouchScale, normalScale;
 
-    public bool isMoving, isCrouching, isRunning;
+    public bool isMoving, isCrouching, isRunning, isJumping;
 
     private float X, Y;
 
     private void Start()
     {
         speed = walk;
-        crouchScale = new Vector3(1, .75f, 1);
+        crouchScale = new Vector3(1, .70f, 1);
         normalScale = new Vector3(1, 1, 1);
         cc = GetComponent<CharacterController>();
         cc.enabled = true;
@@ -71,6 +71,12 @@ public class PlayerController : MonoBehaviour
                 speed = run;
                 isRunning = true;
             }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                isJumping = true;
+                Debug.Log("Jump");
+                gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100000, 0), ForceMode.Impulse);
+            }
             //Crouch
             else if (Input.GetKey(KeyCode.LeftControl))
             {
@@ -79,6 +85,7 @@ public class PlayerController : MonoBehaviour
                 speed = crouch;
                 player.transform.localScale = crouchScale;
             }
+            
             else
             {
                 isRunning = false;

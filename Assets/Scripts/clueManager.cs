@@ -82,7 +82,7 @@ public class clueManager : MonoBehaviour
         }
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) && notepad)
         {
-            toggleNotePad(false);
+            //toggleNotePad(false);
 
         }
         /*
