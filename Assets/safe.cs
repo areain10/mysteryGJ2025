@@ -19,6 +19,7 @@ public class safe : MonoBehaviour
         canvas.gameObject.SetActive(false);
         keypad = false;
         openSprite.SetActive(false);
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("sound/safeclick");
     }
     public void ShowKeypad()
     {
@@ -49,6 +50,7 @@ public class safe : MonoBehaviour
     public void changeNumber(int index)
     {
         currentCode[index] = (currentCode[index] + 1) % 9;
+        GetComponent<AudioSource>().Play();
     }
     public void tryOpen()
     {
@@ -59,15 +61,22 @@ public class safe : MonoBehaviour
             {
                 same = false;
             }
+
         }
         if(same)
         {
             open = true;
             openSafe();
         }
+        else
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
     public void openSafe()
     {
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("sound/safeopen");
+        GetComponent<AudioSource>().Play();
         ShowKeypad();
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<MeshCollider>().enabled = false;

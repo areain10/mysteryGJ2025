@@ -20,6 +20,7 @@ public class Detection : MonoBehaviour
 
     [TextArea(2, 5)]
     [SerializeField] private string interactionPromptText;
+    [SerializeField] AudioSource talkingsfx;
 
     private int currentLine = 0;
     public bool isInteracting = false;
@@ -79,6 +80,10 @@ public class Detection : MonoBehaviour
         itemDesc.text = "";
         foreach (char c in text)
         {
+            if (!talkingsfx.isPlaying)
+            {
+                talkingsfx.Play();
+            }
             
             itemDesc.text+= c;
             yield return new WaitForSeconds(0.02f);
@@ -159,8 +164,14 @@ public class Detection : MonoBehaviour
                 if (hit.collider.gameObject.GetComponent<door>() != null)
                 {
                     door script = hit.collider.gameObject.GetComponent<door>();
+                    try
+                    {
+                        script.gameObject.GetComponent<AudioSource>().Play();
+                    }
+                    catch { }
                     Debug.Log("FoundDoor");
                     StartCoroutine( teleportTo(script.spawnPoint));
+                    
                 }
                 if (hit.collider.gameObject.GetComponent<safe>() != null)
                 {

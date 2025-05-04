@@ -48,7 +48,7 @@ public class readingManager : MonoBehaviour
     public void changePage(int addin)
     {
         currentPage = Mathf.Clamp(currentPage+addin, 0, (int)(Mathf.Ceil(passage.Length/2)));
-        
+        GetComponent<AudioSource>().Play();
         load(passage, bg);
     }
 
@@ -59,7 +59,7 @@ public class readingManager : MonoBehaviour
         {
             reading= false;
             FindAnyObjectByType<Detection>().currentReading = null;
-            FindAnyObjectByType<clueManager>().toggleNotePad(true);
+            FindAnyObjectByType<clueManager>().toggleNotePad(false);
             gameObject.SetActive(false);
 
         }

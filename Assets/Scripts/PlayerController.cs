@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private Camera cam;
     [SerializeField] private float Sensitivity;
-
+    [SerializeField] AudioClip footstep;
     [SerializeField] private float speed, walk, run, crouch;
 
     private Vector3 crouchScale, normalScale;
@@ -85,7 +85,6 @@ public class PlayerController : MonoBehaviour
                 speed = crouch;
                 player.transform.localScale = crouchScale;
             }
-            
             else
             {
                 isRunning = false;
@@ -96,6 +95,15 @@ public class PlayerController : MonoBehaviour
             // Detects if the player is moving.
             // Useful if you want footstep sounds and or other features in your game.
             isMoving = cc.velocity.sqrMagnitude > 0.0f ? true : false;
+        }
+
+        if(isMoving && !GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+        else if(!isMoving && GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Stop();
         }
     }
 }

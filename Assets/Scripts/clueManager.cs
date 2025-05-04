@@ -19,6 +19,7 @@ public class clueManager : MonoBehaviour
     [SerializeField] string testNum;
     [SerializeField] string testName;
     [SerializeField] string testRoom;
+    [SerializeField] AudioSource clueSound;
     int currentItemSelection;
     int currentRoomSelection;
     int currentNotepad;
@@ -61,6 +62,8 @@ public class clueManager : MonoBehaviour
         if (!tmp)
         {
             itemsInteracted.Add(script.itemID);
+            FindAnyObjectByType<notification>().ShowNotification("Clue has been noted down");
+            clueSound.Play();
         }
         
     }
