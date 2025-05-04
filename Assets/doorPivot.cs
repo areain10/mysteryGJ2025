@@ -12,7 +12,12 @@ public class doorPivot : MonoBehaviour
     void Start()
     {
         unlocked = false;
-        openSprite.SetActive(false);
+        try
+        {
+            openSprite.SetActive(false);
+        }
+        catch { }
+        
     }
     public void openDoor(List<string> items)
     {

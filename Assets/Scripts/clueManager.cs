@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -62,7 +63,7 @@ public class clueManager : MonoBehaviour
         if (!tmp)
         {
             itemsInteracted.Add(script.itemID);
-            FindAnyObjectByType<notification>().ShowNotification("Clue has been noted down");
+            FindAnyObjectByType<notification>().ShowNotification("Clue has been noted down:" + gm.itemMasterList[Int32.Parse(script.itemID)-1][1]);
             clueSound.Play();
         }
         

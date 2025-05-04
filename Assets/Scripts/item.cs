@@ -44,7 +44,7 @@ public class item : MonoBehaviour
     }
     public void displayprompt()
     {
-        timer = Mathf.Clamp(timer+0.3f,0,1);
+        timer = Mathf.Clamp(timer+0.3f,0,0.5f);
         
     }
     void checkIfShouldDisplay()
@@ -86,7 +86,7 @@ public class item : MonoBehaviour
             //Debug.Log(timer + "    " + displaying);
             
         }
-        timer = Mathf.Clamp(timer - 0.01f, 0, 1);
+        timer = Mathf.Clamp(timer - 0.01f, 0, 0.5f);
 
     }
     void Update()
