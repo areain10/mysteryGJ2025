@@ -20,11 +20,13 @@ public class casefilewriter : MonoBehaviour
     bool canchoose;
     int numOfOptions;
     string[] currentOption;
+    List<string> viableOptions;
     public string currentSelectedEvidence;
     string[] listOfNeeded;
     Color textColor;
     int pressedOption;
     int finalScore;
+    List<importantButtons> selectedItems;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class casefilewriter : MonoBehaviour
             "000 due to natural causes", "002 by suicide", "002 accidental" }
         };*/
         readCaseFileCSV();
+        
         //importantID = FindAnyObjectByType<gameManager>().clueID;
         currentwriting = -1;
         canchoose = false;
@@ -45,6 +48,7 @@ public class casefilewriter : MonoBehaviour
         pressedOption = -1;
         optionsTextBox.text = "";
         optionsTextBox.transform.parent.gameObject.SetActive(false);
+        selectedItems= new List<importantButtons> ();
 
         for (int i = 0; i < importantID.Count; i++)
         {
@@ -54,6 +58,7 @@ public class casefilewriter : MonoBehaviour
             //go.transform.localScale = new Vector3(1,0.3f);
             go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (30 * i), go.transform.position.z);
             go.transform.SetParent(ContainerGO.transform, false);
+            selectedItems.Add(go.GetComponent<importantButtons>());
         }
         StartCoroutine(loadNextLine(1, false));
         
@@ -82,13 +87,14 @@ public class casefilewriter : MonoBehaviour
         currentwriting = lineNumber;
         string tmp = writing[currentwriting][2].Replace("\\n", "\n") + " ";
         canchoose = false;
-        
- 
-        
-            foreach (char c in tmp)
+
+
+        GetComponent<AudioSource>().Play();
+        foreach (char c in tmp)
         {
             caseTextBox.text += c;
             yield return new WaitForSeconds(0.02f);
+            
         }
         if(includeClue)
         {
@@ -98,13 +104,22 @@ public class casefilewriter : MonoBehaviour
             foreach (char c in clue)
             {
                 caseTextBox.text += c;
-                yield return new WaitForSeconds(0.001f);
+                
+                yield return new WaitForSeconds(0.03f);
             }
-            caseTextBox.text += ")";
-            currentSelectedEvidence = "";
+            caseTextBox.text += "). ";
             
+            foreach(var x in selectedItems)
+            {
+                if(currentSelectedEvidence == x.ItemID)
+                {
+                    Destroy(x.gameObject);
+                }
+            }
+            currentSelectedEvidence = "";
             pressedOption = -1;
         }
+        GetComponent<AudioSource>().Stop();
         casefileButtons[] tmps = FindObjectsByType<casefileButtons>(FindObjectsSortMode.None);
         foreach (var buttons in tmps)
         {
@@ -135,6 +150,7 @@ public class casefilewriter : MonoBehaviour
         currentOption = currentOptions;
         numOfOptions = 0;
         canchoose = true;
+        viableOptions = new List<string>();
         optionsTextBox.text = "";
         for(int i=0; i < currentOptions.Length; i++)
         {
@@ -151,30 +167,41 @@ public class casefilewriter : MonoBehaviour
                     if (writing[Int32.Parse(currentOptions[i])][1].Split('|')[0] != "000")
                     {
                         
-                        tmp = "<color=yellow>"+(numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "<color=yellow>" +"\n";
+                        tmp = "<color=yellow>"+(numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "<color=yellow>" +"(Please Select Corresponding Clue)\n";
                     }
                     else
                     {
                         tmp= (numOfOptions).ToString() + "." + writing[Int32.Parse(currentOptions[i])][2].Replace("\\n", "") + "\n";
 
                     }
-                    GameObject go = Instantiate(OptionsButtonPrefab,optionsTextBox.transform.parent);
+                    GameObject go = Instantiate(OptionsButtonPrefab, optionsTextBox.transform.parent);
                     //GameObject go = Instantiate(ItemButtonPrefab);
                     go.GetComponentInChildren<TextMeshProUGUI>().text = tmp;
                     go.GetComponentInChildren<optionsButton>().num = numOfOptions;
-                    go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (100 * (i-1)), go.transform.position.z);
+                    go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (85 * (numOfOptions - 2)), go.transform.position.z);
+                    viableOptions.Add(currentOptions[i]);
                     //go.transform.SetParent(ContainerGO.transform, false);
                     //optionsTextBox.color = Color.black;
+                }
+                else
+                {
+                    
+                    
                 }
             }
             catch
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                StartCoroutine(loadEnding());
                 
             }
             
             
         }
+    }
+    IEnumerator loadEnding()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     bool checkIfShouldDisplay(string[] line)
     {
@@ -205,6 +232,7 @@ public class casefilewriter : MonoBehaviour
     public void chooseOption(int option)
     {
         pressedOption = option;
+        currentOption = viableOptions.ToArray();
         checkIfShouldDisplay(writing[Int32.Parse(currentOption[option - 1])]);
         
         string[] tmp = writing[Int32.Parse(currentOption[option - 1])][1].Split('|');
@@ -217,7 +245,7 @@ public class casefilewriter : MonoBehaviour
         {
             StartCoroutine(loadNextLine(Int32.Parse(currentOption[option - 1]),false));
         }
-        else if (currentSelectedEvidence!="")
+        else if (currentSelectedEvidence!="" )
         {
             foreach(var x in writing[Int32.Parse(currentOption[option - 1])][1].Split('|'))
             {
@@ -225,13 +253,14 @@ public class casefilewriter : MonoBehaviour
             }
             if (writing[Int32.Parse(currentOption[option - 1])][1].Split('|').ToList().Contains(currentSelectedEvidence))
             {
-                Debug.Log("YOU GOT IT RIGHT");
-                FindAnyObjectByType<gameManager>().finalScores += 1;
+                //Debug.Log("YOU GOT IT RIGHT");
+                
 
             }
             StartCoroutine(loadNextLine(Int32.Parse(currentOption[option - 1]),true));
         }
-        
+        FindAnyObjectByType<gameManager>().finalScores += Int32.Parse(writing[Int32.Parse(currentOption[option - 1])][4]);
+        Debug.Log("CURENT SCORE:" + FindAnyObjectByType<gameManager>().finalScores);
         //caseTextBox.text += " "+ writing[currentwriting][option];
         //loadNextLine();
     }

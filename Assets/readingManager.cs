@@ -33,9 +33,9 @@ public class readingManager : MonoBehaviour
         bg = backgroundImage;
         try
         {
-            pageTextBox[0].text = passages[currentPage];
+            pageTextBox[0].text = passages[currentPage].Replace("\\n","\n");
             tmp = true;
-            pageTextBox[1].text = passages[currentPage+1]; tmp = true;
+            pageTextBox[1].text = passages[currentPage+1].Replace("\\n", "\n"); tmp = true;
         }
         catch
         {
@@ -47,7 +47,8 @@ public class readingManager : MonoBehaviour
 
     public void changePage(int addin)
     {
-        currentPage = Mathf.Clamp(currentPage+addin, 0, (int)(Mathf.Ceil(passage.Length/2)));
+        
+        currentPage = Mathf.Clamp(currentPage+addin, 0, passage.Length-2);
         GetComponent<AudioSource>().Play();
         load(passage, bg);
     }

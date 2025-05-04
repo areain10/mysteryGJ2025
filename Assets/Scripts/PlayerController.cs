@@ -63,8 +63,15 @@ public class PlayerController : MonoBehaviour
             Vector3 forward = transform.forward * vertical;
             Vector3 right = transform.right * horizontal;
 
+            try
+            {
+                cc.SimpleMove(Vector3.Normalize(forward + right) * speed);
+            }
+            catch
+            {
 
-            cc.SimpleMove(Vector3.Normalize(forward + right) * speed);
+            }
+            
             // Determines if the speed = run or walk
             if (Input.GetKey(KeyCode.LeftShift))
             {

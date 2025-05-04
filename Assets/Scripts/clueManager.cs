@@ -70,6 +70,7 @@ public class clueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (pageNum==-1)
         {
             debugtext.text = "WRITING CLUE";

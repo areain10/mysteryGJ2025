@@ -7,43 +7,59 @@ public class doorPivot : MonoBehaviour
     public bool open;
     bool unlocked;
     [SerializeField]string requiredKey;
+    [SerializeField] GameObject openSprite;
     // Start is called before the first frame update
     void Start()
     {
         unlocked = false;
+        openSprite.SetActive(false);
     }
     public void openDoor(List<string> items)
     {
-            if (open)
+        if (open)
+        {
+            open = true;
+
+        }
+        else
+        {
+            if (requiredKey != null)
             {
-                open = false;
-                Transform parent = transform.parent.transform;
-                parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y - 90, parent.localEulerAngles.z);
-            }
-            if(requiredKey != null)
-            {
-               
-                    foreach (var i in items)
+
+                foreach (var i in items)
+                {
+                    if (i.Equals(requiredKey))
                     {
-                        if (i.Equals(requiredKey))
+                        Debug.Log("OPENDOOR");
+                        open = true;
+                        unlocked = true;
+                        //gameObject.GetComponent<item>().enabled = false;
+                        try
                         {
-                            open = true;
-                            unlocked = true;
-                            gameObject.GetComponent<item>().enabled = false;
-                            Destroy(gameObject.transform.GetChild(0).gameObject);
-                            Transform parent = transform.parent.transform;
-                            parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y + 90, parent.localEulerAngles.z);
+                            openSprite.SetActive(true);
+                            gameObject.SetActive(false);
                         }
+
+                        catch { }
+                        
+                        //Destroy(gameObject.transform.GetChild(0).gameObject);
+                        //Transform parent = transform.parent.transform;
+                        //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + 90, transform.localEulerAngles.z);
                     }
-                
-                
+                }
+
+
             }
             else
             {
                 open = true;
-                Transform parent = transform.parent.transform;
-                parent.localEulerAngles = new Vector3(parent.localEulerAngles.x, parent.localEulerAngles.y + 90, parent.localEulerAngles.z);
+                openSprite.SetActive(true);
+                gameObject.SetActive(false);
+                //Transform parent = transform.parent.transform;
+                //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + 90, transform.localEulerAngles.z);
             }
+        }
+            
         
             
         

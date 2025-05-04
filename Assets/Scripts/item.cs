@@ -45,6 +45,7 @@ public class item : MonoBehaviour
     public void displayprompt()
     {
         timer = Mathf.Clamp(timer+0.3f,0,1);
+        
     }
     void checkIfShouldDisplay()
     {
@@ -59,12 +60,13 @@ public class item : MonoBehaviour
             catch {
                 var dpPre = Resources.Load<GameObject>("dpPre");
                 GameObject go = Instantiate(dpPre);
-                go.transform.parent = transform;
+                go.transform.SetParent(transform, true);
+                //go.transform.parent = transform;
                 go.transform.position = transform.position;
                 displayPrompt = go;
             }
         }
-        if (displaying && timer <= 0.1f)
+        else if (displaying && timer <= 0.1f)
         {
             displaying = false;
             try
@@ -77,9 +79,19 @@ public class item : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void FixedUpdate()
+    {
+        if (displayPrompt!=null)
+        {
+            //Debug.Log(timer + "    " + displaying);
+            
+        }
+        timer = Mathf.Clamp(timer - 0.01f, 0, 1);
+
+    }
     void Update()
     {
-        timer = Mathf.Clamp(timer - 0.01f, 0, 1);
+        
         //Debug.Log(timer);
         checkIfShouldDisplay();
     }

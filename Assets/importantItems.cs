@@ -54,6 +54,7 @@ public class importantItems : MonoBehaviour
             for (int i = 0; i < currentPage.Count; i++)
             {
                 GameObject go = Instantiate(ItemButtonPrefab);
+               
                 go.GetComponent<importantButtons>().instantiationOfButton(itemsID[((pageNum - 1) * 9) + i]);
                 go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (70 * i), go.transform.position.z);
                 go.transform.SetParent(ContainerGO.transform, false);
@@ -80,6 +81,7 @@ public class importantItems : MonoBehaviour
     }
     public void nextPage(bool nexts)
     {
+        GetComponent<AudioSource>().Play();
         next = nexts;
         if (nexts)
         {

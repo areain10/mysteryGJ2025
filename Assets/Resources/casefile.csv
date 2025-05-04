@@ -1,32 +1,43 @@
- ID;Items needed to show sepperated by | (000 if none);text;options id sepperated by |
-001;000;Scene at Halkin Isle visited on March 21, 1982.\n\n;002
-002;000;Initial reason for visit being that keepers failed to ignite the light as of 17 March. Keepers at the time were Hugh O’Brien, age 50, and Jack Moore, age 34.\n\n;003
-003;000;State of location was found to be;007|008
-004;000;\n\nO’Brien;009|010
-005;000;\n\nMoore ;024|025|028
-006;000;\n\n\nInvestigation by writing officer is concluded. Case report will be presented for review and guide any necessary subsequent investigation(s). ;999
-007;000;standard.;004
-008;000;unusual.;004
-009;000;not found.;005
-010;001;found deceased.;011
-011;000;Cause of death declared to be;012|013|014|015
-012;000;due to natural causes.;005
-013;002;accidental.;005
-014;002;suicide.;005
-015;003|004;by the hand of;016|017|018|019
-016;000;an unclear third party.;005
-017;005;Owen Kelly.;005
-018;005;Owen Kelly & Jack Moore.;005
-019;006;Jack Moore;020
-020;000;This is found to be in the name of;021|022|023
-021;000;an unclear motive.;005
-022;000;murderous intent.;005
-023;006|014|011|015;self-defense.;005
-024;000;not found.;006
-025;007|006;declared to be missing;026|027
-026;000;and likely alive. Search should be placed.;006
-027;000;and likely deceased.;006
-028;007;declared missing and wanted for:;029|030|031
-029;003|006;the killing of Hugh O’Brien.;006
-030;000;abandoning the light.;006
-031;006;gross indecency.;006
+ID;Items needed to show sepperated by | (000 if none);text;options id sepperated by |;important
+001;000;Scene at Halkin Isle visited on March 21, 1982. ;002;0
+002;000;\nInitial reason for visit being that keepers failed to ignite the light as of 17 March. Keepers at the time were Hugh O’Brien, age 50, and Jack Moore, age 34. ;004|033;0
+003;000;\n\nState of location was found to be;007|008;0
+004;000;\n\nThough initially presumed missing, the whereabouts of Hugh O’Brien were clarified when;009|010;0
+005;000;\n\nMoore ;024|025|028;0
+006;000;\n\nInvestigation by writing officer is concluded. Case report will be presented for review and guide any necessary subsequent investigation(s). ;999;0
+007;000;orderly and as expected.;004|033;0
+008;008|001|003|011;marked by signs of disturbances;004|033;0
+009;000;not found.;005;0
+010;001;found deceased in his bedroom.;011;1
+011;000;Cause of death declared to be;012|013|014|015;0
+012;000;due to natural causes.;005;0
+013;002;accidental;005;0
+014;002;suicide;005;0
+015;000;by the hand of;016|017|018|019;0
+016;000;an unclear third party.;005;0
+017;005|006;Jack Moore.;020;0
+018;005|006;Owen Kelly & Jack Moore.;020;1
+019;006;Jack Moore.;020;0
+020;000;This is found to be in the name of;021|022|023;0
+021;000;an unclear motive.;005|039;0
+022;000;murderous intent.;005|039;0
+023;006|014|011|015;self-defense.;005|039;1
+024;000;not found.;006;0
+025;007|006|009|;declared to be missing;026|027;1
+026;000;and likely alive. Search should be placed.;006;1
+027;000;and likely deceased.;006;1
+028;007;declared missing and wanted for:;029|030|031;0
+029;003|006;the killing of Hugh O’Brien.;006;1
+030;000;abandoning the light.;006;0
+031;006;gross indecency.;006;0
+032;009;fled from the island;005;0
+033;012|010;\nAdditional evidence indicated the keepers may not have been alone. Items was found in the quarters that suggested;034|035|036|037;1
+034;012;someone had been living there in secrecy.;037|038;0
+035;020;a visitor was expected but never arrived.;004;0
+036;015;a priest had conducted rites on-site.;004;0
+037;006|005;Which was a man named Owen Kelly.;004;1
+038;000;However no names could be identified.;004;0
+039;000;This was done using ;040|041|042;0
+040;003;an axe;005;1
+041;002;a knife;005;0
+042;000;unarmed techniques;005;0

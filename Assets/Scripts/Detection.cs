@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.Burst.CompilerServices;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Detection : MonoBehaviour
 {
@@ -101,22 +102,23 @@ public class Detection : MonoBehaviour
     void Update()
     {
         RaycastHit hits;
-        Ray rays = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-
-        if (Physics.Raycast(rays, out hits,3f) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting && !readingManager.reading)
+        //Ray rays = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        // Ray rays = Physics.Raycast( Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward);
+        Debug.DrawRay(Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward * 3f, Color.green);
+        if (Physics.Raycast(Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward, out hits, 3.5f) && hits.collider.gameObject.GetComponent<item>() != null && !isInteracting && !readingManager.reading)
         {
-            item script = hits.collider.gameObject.GetComponent<item>();
-            Debug.Log("DisplayingPrompt: " + script.itemName);
 
+            item script = hits.collider.gameObject.GetComponent<item>();
+            //Debug.Log("DisplayingPrompt: " + script.itemName);
             script.displayprompt();
         }
-            if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)) && !isInteracting ) 
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)) && !isInteracting ) 
         {
             
             RaycastHit hit;
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f,0));
 
-            if (Physics.Raycast(ray, out hit,3f)) 
+            if (Physics.Raycast(Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward, out hit,3.5f)) 
             {
                 
                 if (hit.collider.gameObject.GetComponent<item>() != null) 
@@ -173,7 +175,7 @@ public class Detection : MonoBehaviour
                     StartCoroutine( teleportTo(script.spawnPoint));
                     
                 }
-                if (hit.collider.gameObject.GetComponent<safe>() != null)
+                else if (hit.collider.gameObject.GetComponent<safe>() != null)
                 {
                     safe script = hit.collider.gameObject.GetComponent<safe>();
                     Debug.Log("FoundSafe");
@@ -183,7 +185,7 @@ public class Detection : MonoBehaviour
                     }
                     
                 }
-                if (hit.collider.gameObject.GetComponent<readable>() != null)
+                else if (hit.collider.gameObject.GetComponent<readable>() != null)
                 {
                     readable script = hit.collider.gameObject.GetComponent<readable>();
                     currentReading = script;
@@ -192,7 +194,7 @@ public class Detection : MonoBehaviour
                     
 
                 }
-                if (hit.collider.gameObject.GetComponent<doorPivot>() != null)
+                else if (hit.collider.gameObject.GetComponent<doorPivot>() != null)
                 {
                     doorPivot script = hit.collider.gameObject.GetComponent<doorPivot>();
                     Debug.Log("OpenDoor");
