@@ -14,7 +14,8 @@ public class gameManager : MonoBehaviour
     [SerializeField] Image blackScreen;
     public void goToContradiction(clueManager cM)
     {
-
+        cluesCollected = new List<string[]>();
+        clueID = new List<string>();
         cluesCollected = cM.cluesWritten;
         clueID = cM.itemsInteracted;
         StartCoroutine(fadeInBlack(-1));

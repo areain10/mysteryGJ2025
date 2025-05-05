@@ -215,6 +215,11 @@ public class Detection : MonoBehaviour
                     script.openDoor(gameObject.GetComponent<clueManager>().itemsInteracted);
 
                 }
+                else if (hit.collider.gameObject.GetComponent<boat>()!= null)
+                {
+                    boat script = hit.collider.gameObject.GetComponent<boat>();
+                    script.endDayPrompt();
+                }
             }
         }
 
@@ -226,7 +231,7 @@ public class Detection : MonoBehaviour
     }
 
 
-    private void ClosePopup()
+    public void ClosePopup()
     {
         if (currentReading != null)
         {
