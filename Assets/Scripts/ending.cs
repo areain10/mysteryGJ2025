@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class ending : MonoBehaviour
 {
     // Start is called before the first frame update
