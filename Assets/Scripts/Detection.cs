@@ -55,10 +55,15 @@ public class Detection : MonoBehaviour
     IEnumerator teleportTo(Transform loc)
     {
         canTeleport = false;
-        toggleSize();
-        gameObject.GetComponent<CharacterController>().enabled = false;
+
+        
         StartCoroutine(GameObject.FindAnyObjectByType<gameManager>().fadeInBlack(1));
+        yield return new WaitForSeconds(0.5f);
+        gameObject.GetComponent<CharacterController>().enabled = false;
         yield return new WaitForSeconds(1f);
+        
+        toggleSize();
+
 
         gameObject.transform.position = loc.position;
         gameObject.GetComponent<CharacterController>().enabled = true;
