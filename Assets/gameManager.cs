@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour
     public List<string> clueID;
     public List<string[]> itemMasterList;
     public int finalScores;
+    public bool homoOrNah;
     [SerializeField] Image blackScreen;
     public void goToContradiction(clueManager cM)
     {

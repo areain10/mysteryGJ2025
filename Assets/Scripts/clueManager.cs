@@ -82,7 +82,7 @@ public class clueManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            gm.goToContradiction(gameObject.GetComponent<clueManager>());
+            
             
         }
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) && notepad)

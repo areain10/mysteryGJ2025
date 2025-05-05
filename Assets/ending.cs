@@ -6,27 +6,34 @@ public class ending : MonoBehaviour
 {
     // Start is called before the first frame update
     int points;
-    Sprite[] endingImages;
+    [SerializeField]Sprite[] endingImages;
+    gameManager gm;
+
     void Start()
     {
+        gm = FindAnyObjectByType<gameManager>();
         try
         {
-            points = FindAnyObjectByType<gameManager>().finalScores;
-            if(points >=0 && points < 3)
+            points = gm.finalScores;
+            if(points >=0 && points < 4)
             {
                 GetComponentInChildren<Image>().sprite = endingImages[0];
             }
-            else if (points >= 3 && points < 5)
+            else if (points >= 4 && points < 8)
             {
-                GetComponentInChildren<Image>().sprite = endingImages[0];
-            }
-            else if (points >= 5 && points < 8)
-            {
-                GetComponentInChildren<Image>().sprite = endingImages[0];
+                GetComponentInChildren<Image>().sprite = endingImages[1];
             }
             else
             {
-                
+                if (gm.homoOrNah)
+                {
+                    GetComponentInChildren<Image>().sprite = endingImages[2];
+
+                }
+                else
+                {
+                    GetComponentInChildren<Image>().sprite = endingImages[3];
+                }
             }
         }
         catch

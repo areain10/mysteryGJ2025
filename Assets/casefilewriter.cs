@@ -26,10 +26,13 @@ public class casefilewriter : MonoBehaviour
     Color textColor;
     int pressedOption;
     int finalScore;
+    bool homophobic;
+    [SerializeField] string GoodBadEndingID;
     List<importantButtons> selectedItems;
     // Start is called before the first frame update
     void Start()
     {
+        homophobic = false;
         finalScore = 0;
         /*writing = new List<string[]>
         {
@@ -86,6 +89,10 @@ public class casefilewriter : MonoBehaviour
         optionsTextBox.transform.parent.gameObject.SetActive(false);
         currentwriting = lineNumber;
         string tmp = writing[currentwriting][2].Replace("\\n", "\n") + " ";
+        if (writing[currentwriting][0] == GoodBadEndingID)
+        {
+            homophobic = false;
+        }
         canchoose = false;
 
 
@@ -201,7 +208,9 @@ public class casefilewriter : MonoBehaviour
     IEnumerator loadEnding()
     {
         yield return new WaitForSeconds(2f);
+        FindAnyObjectByType<gameManager>().homoOrNah = homophobic;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
     bool checkIfShouldDisplay(string[] line)
     {

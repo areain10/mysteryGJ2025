@@ -16199,6 +16199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueID: []
   finalScores: 0
+  homoOrNah: 0
   blackScreen: {fileID: 1652607805}
 --- !u!4 &1035401938
 Transform:
@@ -16695,7 +16696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf224b789010340438724ff19a39eaa2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d80dbd51b74d374d88c140464ce76f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
