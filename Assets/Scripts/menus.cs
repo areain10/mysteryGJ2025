@@ -13,9 +13,9 @@ public class menus : MonoBehaviour
     {
         
     }
-    public void enterGame()
+    public void enterGame(int value)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(value);
     }
     public void exitGame()
     {
