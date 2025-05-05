@@ -49,7 +49,7 @@ public class safe : MonoBehaviour
     }
     public void changeNumber(int index)
     {
-        currentCode[index] = (currentCode[index] + 1) % 9;
+        currentCode[index] = (currentCode[index] + 1) % 10;
         GetComponent<AudioSource>().Play();
     }
     public void tryOpen()
