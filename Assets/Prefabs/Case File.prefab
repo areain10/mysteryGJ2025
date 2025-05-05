@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec12e9e84e37ab04e815ae6c6334bfdb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62c0470e6f9f7374eae92f2bf17fbea3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -409,8 +409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -217, y: 88}
-  m_SizeDelta: {x: 229.7, y: 244.2}
+  m_AnchoredPosition: {x: -217, y: 79.49}
+  m_SizeDelta: {x: 273.838, y: 291.0195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3386253186064144547
 CanvasRenderer:
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec12e9e84e37ab04e815ae6c6334bfdb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da30bd41bc69acc428deecf585069a00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -484,8 +484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.2, y: -5.3}
-  m_SizeDelta: {x: 78.7, y: 50}
+  m_AnchoredPosition: {x: -2.2, y: -6.16101}
+  m_SizeDelta: {x: 78.7, y: 48.27798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6148146510541610119
 CanvasRenderer:
@@ -525,8 +525,8 @@ MonoBehaviour:
     officer is concluded. Case report will be presented for review and guide any
     necessary subsequent investigation(s).\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b287cddfb5bbee64dbb2a0a4cc72be31, type: 2}
-  m_sharedMaterial: {fileID: 5717828310690284954, guid: b287cddfb5bbee64dbb2a0a4cc72be31,
+  m_fontAsset: {fileID: 11400000, guid: 16911c6a1872cc64f8aec4d1f9039b8f, type: 2}
+  m_sharedMaterial: {fileID: -6738144342888727567, guid: 16911c6a1872cc64f8aec4d1f9039b8f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -551,8 +551,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.95
-  m_fontSizeBase: 0.95
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

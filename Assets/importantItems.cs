@@ -39,7 +39,7 @@ public class importantItems : MonoBehaviour
     void loadPage()
     {
         currentPage = new List<string>();
-        for (int i = 0; i < 9 - (Mathf.Clamp((pageNum * 9) - itemsID.Count, 0, 999)); i++)
+        for (int i = 0; i < 7 - (Mathf.Clamp((pageNum * 7) - itemsID.Count, 0, 999)); i++)
         {
             currentPage.Add(itemsID[i]);
         }
@@ -55,8 +55,8 @@ public class importantItems : MonoBehaviour
             {
                 GameObject go = Instantiate(ItemButtonPrefab);
                
-                go.GetComponent<importantButtons>().instantiationOfButton(itemsID[((pageNum - 1) * 9) + i]);
-                go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (70 * i), go.transform.position.z);
+                go.GetComponent<importantButtons>().instantiationOfButton(itemsID[((pageNum - 1) * 7) + i]);
+                go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y - (80 * i), go.transform.position.z);
                 go.transform.SetParent(ContainerGO.transform, false);
             }
         }
