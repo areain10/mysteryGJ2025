@@ -50,6 +50,10 @@ public class Detection : MonoBehaviour
     }
     IEnumerator teleportTo(Transform loc)
     {
+        while(isInteracting)
+        {
+
+        }
         gameObject.GetComponent<CharacterController>().enabled = false;
         StartCoroutine(GameObject.FindAnyObjectByType<gameManager>().fadeInBlack(1));
         yield return new WaitForSeconds(1f);
