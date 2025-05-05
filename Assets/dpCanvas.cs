@@ -16,9 +16,9 @@ public class dpCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles = new Vector3
+        transform.localEulerAngles = new Vector3
         (
-             0,
+             90,
              transform.eulerAngles.y,
              0
         );

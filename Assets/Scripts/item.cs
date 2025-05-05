@@ -61,9 +61,13 @@ public class item : MonoBehaviour
             catch {
                 var dpPre = Resources.Load<GameObject>("dpPre");
                 GameObject go = Instantiate(dpPre);
-                go.transform.SetParent(transform, true);
+                
                 //go.transform.parent = transform;
                 go.transform.position = transform.position;
+                
+                go.transform.SetParent(transform, true);
+                go.transform.localScale = new Vector3(go.transform.localScale.x, go.transform.localScale.x, go.transform.localScale.x);
+
                 displayPrompt = go;
             }
         }

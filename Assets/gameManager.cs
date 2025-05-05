@@ -12,6 +12,7 @@ public class gameManager : MonoBehaviour
     public List<string[]> itemMasterList;
     public int finalScores;
     public bool homoOrNah;
+    bool fading;
     [SerializeField] Image blackScreen;
     public void goToContradiction(clueManager cM)
     {
@@ -38,6 +39,7 @@ public class gameManager : MonoBehaviour
     }
     private void Awake()
     {
+        fading = false;
         DontDestroyOnLoad(gameObject);
         loadItemCSV();
     }
@@ -60,8 +62,9 @@ public class gameManager : MonoBehaviour
     public IEnumerator fadeInBlack(int multiplier)
     {
         blackScreen.gameObject.SetActive(true);
-        if(multiplier >= 0)
+        if(multiplier >= 0 && !fading)
         {
+            fading=true;
             float tmp = 0f;
             while (tmp <= 1)
             {
@@ -89,6 +92,7 @@ public class gameManager : MonoBehaviour
             }
             blackScreen.color = new Color(0f, 0f, 0f, 0f);
             blackScreen.gameObject.SetActive(false);
+            fading= false;
         }
         
         

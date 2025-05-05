@@ -186,26 +186,7 @@ public class clueManager : MonoBehaviour
                 }
             }
         }*/
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            notepad = !notepad;
-            canvas.enabled = notepad;
-            
-            if (notepad)
-            {
-             
-                
-                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            }
-            else
-            {
-                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-
-            }
-            
-            
-
-        }
+       
 
     }
     public void toggleNotePad(bool newVal)
@@ -215,7 +196,9 @@ public class clueManager : MonoBehaviour
         {
             case true: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;GetComponent<Detection>().isInteracting = true;Cursor.lockState = CursorLockMode.Confined;Cursor.visible=true ;
                 break;
-            case false: gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; GetComponent<Detection>().isInteracting = false; Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false;
+            case false:
+                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation; ; GetComponent<Detection>().isInteracting = false; Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false;
                 break;
                 
         }

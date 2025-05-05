@@ -27,7 +27,7 @@ public class safe : MonoBehaviour
         {
             GameObject.FindAnyObjectByType<clueManager>().toggleNotePad(false);
             //GameObject.FindAnyObjectByType<clueManager>().gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            GameObject.FindAnyObjectByType<PlayerController>().isCrouching = false;
+            //GameObject.FindAnyObjectByType<PlayerController>().isCrouching = false;
             GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position = new Vector3(GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position.x, GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position.y + 3, GameObject.FindAnyObjectByType<clueManager>().gameObject.transform.position.z);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
@@ -81,6 +81,7 @@ public class safe : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<MeshCollider>().enabled = false;
         openSprite.SetActive(true) ;
+        GameObject.FindAnyObjectByType<clueManager>().toggleNotePad(false);
     }
     // Update is called once per frame
     void Update()

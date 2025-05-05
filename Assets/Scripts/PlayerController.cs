@@ -50,13 +50,15 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(Screen.width / 1980f);
             X += Input.GetAxisRaw("Mouse X") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
             Y -= Input.GetAxisRaw("Mouse Y") * (Sensitivity * Time.deltaTime * (Screen.width / 1980f));
-
+            Debug.Log(X + "        " + Y);
             if (Y < MIN_Y)
                 Y = MIN_Y;
             else if (Y > MAX_Y)
                 Y = MAX_Y;
             #endregion
-            transform.localRotation = Quaternion.Euler(Y, X, 0.0f);
+            cam.transform.eulerAngles = new Vector3(Y, X, .0f);
+            transform.eulerAngles = new Vector3(0,X,.0f);
+            //transform.localRotation = Quaternion.Euler(0f, X, 0.0f);
 
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
@@ -78,12 +80,7 @@ public class PlayerController : MonoBehaviour
                 speed = run;
                 isRunning = true;
             }
-            if (Input.GetKey(KeyCode.Space))
-            {
-                isJumping = true;
-                Debug.Log("Jump");
-                gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 100000, 0), ForceMode.Impulse);
-            }
+           
             //Crouch
             else if (Input.GetKey(KeyCode.LeftControl))
             {
@@ -103,7 +100,10 @@ public class PlayerController : MonoBehaviour
             // Useful if you want footstep sounds and or other features in your game.
             isMoving = cc.velocity.sqrMagnitude > 0.0f ? true : false;
         }
-
+        else
+        {
+            
+        }
         if(isMoving && !GetComponent<AudioSource>().isPlaying)
         {
             GetComponent<AudioSource>().Play();

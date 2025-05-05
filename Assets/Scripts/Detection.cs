@@ -55,6 +55,7 @@ public class Detection : MonoBehaviour
     IEnumerator teleportTo(Transform loc)
     {
         canTeleport = false;
+        toggleSize();
         gameObject.GetComponent<CharacterController>().enabled = false;
         StartCoroutine(GameObject.FindAnyObjectByType<gameManager>().fadeInBlack(1));
         yield return new WaitForSeconds(1f);
@@ -230,7 +231,18 @@ public class Detection : MonoBehaviour
         }
     }
 
-
+    void toggleSize()
+    {
+        Debug.Log("TRANS:"+ transform.localScale.x);
+        if (transform.localScale.x >= 1.5f)
+        {
+            transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1.4f, 1.5f, 1.4f);
+        }
+    }
     public void ClosePopup()
     {
         if (currentReading != null)
