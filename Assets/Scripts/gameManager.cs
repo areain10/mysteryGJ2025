@@ -14,8 +14,10 @@ public class gameManager : MonoBehaviour
     public bool homoOrNah;
     bool fading;
     [SerializeField] Image blackScreen;
+    public Ending[] endingChoices;
     public void goToContradiction(clueManager cM)
     {
+        
         cluesCollected = new List<string[]>();
         clueID = new List<string>();
         cluesCollected = cM.cluesWritten;
@@ -29,7 +31,7 @@ public class gameManager : MonoBehaviour
     void Start()
     {
 
-        
+        endingChoices = new Ending[2] { Ending.nobody, Ending.nosearch};
         if(GameObject.FindGameObjectsWithTag("gameManager").Length > 1)
         {
             Destroy(gameObject);

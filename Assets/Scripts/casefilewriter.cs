@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+public enum Ending { selfdmurder,suicideaccidental,nobody,wanted,murder,thellight,nosearch,}
 public class casefilewriter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI caseTextBox;
@@ -28,12 +29,16 @@ public class casefilewriter : MonoBehaviour
     int finalScore;
     bool homophobic;
     [SerializeField] string GoodBadEndingID;
+    gameManager gm;
     List<importantButtons> selectedItems;
+    
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindAnyObjectByType<gameManager>();
         homophobic = false;
         finalScore = 0;
+
         /*writing = new List<string[]>
         {
             new string[] { "000 O’Brien",
@@ -94,7 +99,26 @@ public class casefilewriter : MonoBehaviour
             homophobic = false;
         }
         canchoose = false;
+        switch (writing[currentwriting][0])
+        {
+            case "009":
+                gm.endingChoices[0] = Ending.nobody; break;
+            case "022":
+                gm.endingChoices[0] = Ending.selfdmurder; break;
+            case "023":
+                gm.endingChoices[0] = Ending.selfdmurder; break;
+            case "010":
+                gm.endingChoices[0] = Ending.suicideaccidental; break;
 
+
+            case "024":
+                gm.endingChoices[1] = Ending.nosearch; break;
+            case "027":
+                gm.endingChoices[1] = Ending.wanted; break;
+            case "026":
+                gm.endingChoices[1] = Ending.thellight; break;
+
+        }
 
         GetComponent<AudioSource>().Play();
         foreach (char c in tmp)

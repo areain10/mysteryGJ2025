@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndingText : MonoBehaviour
 {
@@ -10,10 +11,10 @@ public class EndingText : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(FadeText());
+        //StartCoroutine(FadeText());
     }
 
-    private IEnumerator FadeText()
+    public IEnumerator FadeText()
     {
         foreach (string line in endingWords)
         {
@@ -27,6 +28,7 @@ public class EndingText : MonoBehaviour
             yield return StartCoroutine(FadeTextToZeroAlpha(1f, text));
             yield return new WaitForSeconds(0.5f);
         }
+        SceneManager.LoadScene(0);
     }
 
 

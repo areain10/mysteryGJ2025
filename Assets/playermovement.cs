@@ -67,8 +67,11 @@ public class PlayerMovement : MonoBehaviour
             walkSpeed = 6f;
             runSpeed = 12f;
         }
-
-        characterController.Move(moveDirection * Time.deltaTime);
+        if (!gameObject.GetComponent<clueManager>().notepad)
+        {
+            characterController.Move(moveDirection * Time.deltaTime);
+        }
+        
 
         if (!gameObject.GetComponent<clueManager>().notepad)
 

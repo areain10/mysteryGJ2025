@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 237806846}
   - component: {fileID: 237806845}
   - component: {fileID: 237806844}
+  - component: {fileID: 237806849}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -159,6 +160,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 01488853c422e8b409684b1f1e3c1822, type: 3}
   - {fileID: 21300000, guid: 0d80dbd51b74d374d88c140464ce76f2, type: 3}
   - {fileID: 21300000, guid: 8b2dd2cefc11ac04ebb22fe9ca65af27, type: 3}
+  gm: {fileID: 1589513989}
+  choices: 0000000005000000
 --- !u!114 &237806845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +247,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &237806849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237806843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f1da48a434a5741b46ae1d67a49689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endingWords:
+  - The report was submitted.
+  - 
+  - 
+  - 
+  text: {fileID: 1515022876}
 --- !u!1 &384755878
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +553,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1589513990}
   - component: {fileID: 1589513989}
-  - component: {fileID: 1589513991}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -556,6 +576,7 @@ MonoBehaviour:
   finalScores: 8
   homoOrNah: 1
   blackScreen: {fileID: 1958321707}
+  endingChoices: 0000000005000000
 --- !u!4 &1589513990
 Transform:
   m_ObjectHideFlags: 0
@@ -571,24 +592,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1589513991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589513988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15f1da48a434a5741b46ae1d67a49689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endingWords:
-  - The report was submitted.
-  - 
-  - 
-  - 
-  text: {fileID: 1515022876}
 --- !u!1 &1656292667
 GameObject:
   m_ObjectHideFlags: 0

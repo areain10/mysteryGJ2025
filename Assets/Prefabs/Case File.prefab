@@ -279,6 +279,7 @@ MonoBehaviour:
     type: 3}
   importantID: []
   currentSelectedEvidence: 
+  GoodBadEndingID: 026
 --- !u!82 &5378261696571129571
 AudioSource:
   m_ObjectHideFlags: 0
