@@ -1143,6 +1143,112 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3335724914305450694, guid: ba9712009314eef4a8dbcda272c7aeb4, type: 3}
+--- !u!1 &81311670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81311671}
+  - component: {fileID: 81311674}
+  - component: {fileID: 81311673}
+  - component: {fileID: 81311672}
+  m_Layer: 0
+  m_Name: lighthouse_glass.002 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &81311671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81311670}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.10492, y: 82.961, z: 0.14135}
+  m_LocalScale: {x: 1018.6541, y: 1031.9056, z: 1703.6305}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1559849868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &81311672
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81311670}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6432862543355647073, guid: 11096bd9c2c19b543a4128cae705dbf9, type: 3}
+--- !u!23 &81311673
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81311670}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -2315404422835026341, guid: 11096bd9c2c19b543a4128cae705dbf9, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &81311674
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81311670}
+  m_Mesh: {fileID: 6432862543355647073, guid: 11096bd9c2c19b543a4128cae705dbf9, type: 3}
 --- !u!1 &81573624
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,22 +6277,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 54.868896
+      value: 60.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 54.868904
+      value: 60.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 54.868904
+      value: 60.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -927.41
+      value: -927.328
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
         type: 3}
@@ -6232,6 +6338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.241
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2012f11d5fcba6f4a81203aa04d5d9b3,
         type: 3}
@@ -6394,17 +6505,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a24f72393c709db40ae23491c821f7a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.886002
+      value: -26.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a24f72393c709db40ae23491c821f7a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.47
+      value: -5.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a24f72393c709db40ae23491c821f7a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.667995
+      value: 34.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a24f72393c709db40ae23491c821f7a4,
         type: 3}
@@ -6462,6 +6573,22 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 133211925}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a24f72393c709db40ae23491c821f7a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 133211929}
+    - targetCorrespondingSourceObject: {fileID: 1341259845690771196, guid: a24f72393c709db40ae23491c821f7a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 831132424}
+    - targetCorrespondingSourceObject: {fileID: 1341259845690771196, guid: a24f72393c709db40ae23491c821f7a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 831132423}
+    - targetCorrespondingSourceObject: {fileID: 1341259845690771196, guid: a24f72393c709db40ae23491c821f7a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 831132422}
   m_SourcePrefab: {fileID: 100100000, guid: a24f72393c709db40ae23491c821f7a4, type: 3}
 --- !u!1 &133211924 stripped
 GameObject:
@@ -6547,6 +6674,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 133211923}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &133211929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133211924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1943992, y: 0.07552236, z: 3.4804163}
+  m_Center: {x: -0.00016961565, y: 0.00011592074, z: -1.7089477}
 --- !u!1 &136332531 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6182787764532645197, guid: 11096bd9c2c19b543a4128cae705dbf9,
@@ -6581,6 +6729,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6532121272209714978, guid: 11096bd9c2c19b543a4128cae705dbf9, type: 3}
+--- !u!65 &136332538
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136332531}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.30441946, y: 0.26421353, z: 0.010889124}
+  m_Center: {x: 0.054358065, y: 0.0017380535, z: 0.5961306}
 --- !u!1 &143797382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 92fbb070e31fca644bd8439375c8611c,
@@ -6805,7 +6974,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a470a08af6b0bb84a9e76d7e13d73c05,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1229935
+      value: 1.086
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a470a08af6b0bb84a9e76d7e13d73c05,
         type: 3}
@@ -6815,7 +6984,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a470a08af6b0bb84a9e76d7e13d73c05,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.398
+      value: 40.717
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a470a08af6b0bb84a9e76d7e13d73c05,
         type: 3}
@@ -10106,6 +10275,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6868914989936822799, guid: 11096bd9c2c19b543a4128cae705dbf9,
         type: 3}
+    - target: {fileID: -5008557958523460718, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 103.07728
+      objectReference: {fileID: 0}
+    - target: {fileID: -5008557958523460718, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.776
+      objectReference: {fileID: 0}
+    - target: {fileID: -2906673397891020863, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1703.6305
+      objectReference: {fileID: 0}
+    - target: {fileID: -2906673397891020863, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 82.961
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 11096bd9c2c19b543a4128cae705dbf9,
         type: 3}
       propertyPath: m_Name
@@ -10120,6 +10309,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 81311671}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11096bd9c2c19b543a4128cae705dbf9,
         type: 3}
       insertIndex: -1
@@ -10149,6 +10342,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 136332535}
+    - targetCorrespondingSourceObject: {fileID: -6182787764532645197, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 136332538}
     - targetCorrespondingSourceObject: {fileID: -4646808689552550516, guid: 11096bd9c2c19b543a4128cae705dbf9,
         type: 3}
       insertIndex: -1
@@ -10858,95 +11055,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8393883867462108715, guid: 8e348891cb3908c498e81c6047d57750, type: 3}
---- !u!1001 &682286708
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1806447428}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2963193
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.006827
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.2803888
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.013566553
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.13970138
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.00792073
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7119242
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.00000035762787
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000040978193
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7022563
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -101.278
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 84c6aa64c55ce714c86d075635ef22dc,
-        type: 3}
-      propertyPath: m_Name
-      value: window1_broken (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 84c6aa64c55ce714c86d075635ef22dc, type: 3}
---- !u!4 &682286709 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84c6aa64c55ce714c86d075635ef22dc,
-    type: 3}
-  m_PrefabInstance: {fileID: 682286708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &683014263
 GameObject:
   m_ObjectHideFlags: 0
@@ -11479,15 +11587,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2089934863}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b7b71099555ee9543b498109a7b51de4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219119933}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b7b71099555ee9543b498109a7b51de4,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1816134723}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b7b71099555ee9543b498109a7b51de4,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1816134722}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b7b71099555ee9543b498109a7b51de4,
         type: 3}
       insertIndex: -1
@@ -12234,6 +12338,95 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a95346fc6e11ab4480b82ee15e62d3f,
     type: 3}
   m_PrefabInstance: {fileID: 1703615368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &765264158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1806447428}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2963194
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.0068274
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2803888
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0218
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1421
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57af55ceb88fb8947977318ffb22ca99,
+        type: 3}
+      propertyPath: m_Name
+      value: window1 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57af55ceb88fb8947977318ffb22ca99, type: 3}
+--- !u!4 &765264159 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 57af55ceb88fb8947977318ffb22ca99,
+    type: 3}
+  m_PrefabInstance: {fileID: 765264158}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &767353503 stripped
 GameObject:
@@ -13099,6 +13292,63 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &831132418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1341259845690771196, guid: a24f72393c709db40ae23491c821f7a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 133211923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &831132422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831132418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9f48fc7f6afc040a88d6f93e914347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 
+  itemName: 
+  firstInteractionText: []
+  followUpText: []
+  interactionPromptText: 
+  seen: 0
+--- !u!114 &831132423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831132418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353c4de102a0ab642bff6ee568d2014c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &831132424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831132418}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19439915, y: 0.15038055, z: 0.111982256}
+  m_Center: {x: -0.00017005362, y: -0.009890776, z: 0.021306872}
 --- !u!1001 &840402854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14281,17 +14531,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 725628d82cb474248af7088306282872,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.834606
+      value: -32.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 725628d82cb474248af7088306282872,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8999999
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 725628d82cb474248af7088306282872,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.241634
+      value: 30.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 725628d82cb474248af7088306282872,
         type: 3}
@@ -17170,12 +17420,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passages:
-  - "my pretty darling, aphrodite\u2019s beloved, there were four ships beneath a
-    pearl-black sky, the sea was hungry, the stars turned shy. only two were spared
-    the reef\u2019s cruel bite, for they had seen your beckoning light. in eight
-    days\u2019 time, a storm will cry, so guide us home, don\u2019t let us die."
-  - ..
-  background: {fileID: 0}
+  - "my pretty darling,\\n\\nthere were four ships beneath a pearl-black sky,\\n\\nonly
+    two were spared the reef\u2019s cruel bite,\\n\\nin eight days\u2019 time, a
+    storm will cry,"
+  - "aphrodite\u2019s beloved,\\n\\nthe sea was hungry, the stars turned shy.\\n\\nfor
+    they had seen your beckoning light.\\n\\nso guide us home\u2014don\u2019t let
+    us die."
+  background: {fileID: 21300000, guid: ec12e9e84e37ab04e815ae6c6334bfdb, type: 3}
 --- !u!1 &1176861906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e348891cb3908c498e81c6047d57750,
@@ -17712,6 +17963,153 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1883793436}
   m_SourcePrefab: {fileID: 100100000, guid: e45d4a950efb133449cb6068dec8a8f7, type: 3}
+--- !u!1001 &1219119932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1816134718}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.010794278
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0077857836
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0016906536
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9731718
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.23007977
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000007450582
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000005960466
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -26.604
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      propertyPath: m_Name
+      value: key
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219119936}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219119935}
+  m_SourcePrefab: {fileID: 100100000, guid: 5a13e182f226a154fb79b9e58b0ce41f, type: 3}
+--- !u!4 &1219119933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1219119932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1219119934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a13e182f226a154fb79b9e58b0ce41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1219119932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1219119935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219119934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9f48fc7f6afc040a88d6f93e914347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 018
+  itemName: 
+  firstInteractionText: []
+  followUpText: []
+  interactionPromptText: 
+  seen: 0
+--- !u!65 &1219119936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219119934}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.016586598, y: 0.010940436, z: 0.013419896}
+  m_Center: {x: -0.0058504683, y: -0.0002037426, z: 0.0006925197}
 --- !u!1 &1227381406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16d71818854a7a8478cfec008802d77d,
@@ -19646,12 +20044,12 @@ PrefabInstance:
     - target: {fileID: 5650019641054335434, guid: ef61995f7cbda544f8de8c8f29226725,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9674611
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 5650019641054335434, guid: ef61995f7cbda544f8de8c8f29226725,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 92.234344
+      value: 92.23
       objectReference: {fileID: 0}
     - target: {fileID: 5650019641054335434, guid: ef61995f7cbda544f8de8c8f29226725,
         type: 3}
@@ -20029,7 +20427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   keypad: 0
-  correctCode: 010000000200000003000000
+  correctCode: 040000000200000008000000
   canvas: {fileID: 2062862825}
   codeText: {fileID: 1343430233}
   openSprite: {fileID: 1816134717}
@@ -20806,11 +21204,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c715ab4643cfd24f9bb4e3b970e0461,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 682286709}
+      addedObject: {fileID: 493276645}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c715ab4643cfd24f9bb4e3b970e0461,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 493276645}
+      addedObject: {fileID: 765264159}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c715ab4643cfd24f9bb4e3b970e0461,
         type: 3}
       insertIndex: -1
@@ -24764,16 +25162,15 @@ MonoBehaviour:
     starving man, name Owen Kelly. Keepers\u2019 consensus to wait until replacement
     keepers arrive to maintain light. General duties for the day. Retrieved spare
     bedding from lighthouse storage.  "
-  - '21 - Light North winds full 24 hours with light rain showers. Sea moderately
-    smooth. General duties for the day. Extended prayer at 1900, Kelly also in attendance.
-    \n\n22 - Moderate East to N.E. winds first half of 24 hours. Variable moderate
-    winds last half of 24 hours. Sea moderately rough full 24 hours. General duties
-    for the day. Asst cleaned glass in lantern room. \n\n23 - Moderate North winds
-    full 24 hours with strong rain showers. Sea rough. Keepers and Kelly pulled boat
-    up on beach. General duties for the day. Keepers secured shed. \n\n24 - Light
-    East winds first third of 24 hours. Sea moderately smooth. Strong East to S.E.
-    winds rest of 24 hours with light rain showers. Sea moderately rough. General
-    duties for the day. Asst and Kelly went fishing.  '
+  - "18 - Light East winds full 24 hours. Sea smooth. General duties for the day.
+    \\n\\n19 - Moderate East winds first half of 24 hours. Last half of 24 hours
+    light to moderate South winds. Sea moderately smooth full 24 hours. General duties
+    for the day. Asst opened fresh oil canister for light. \\n\\n20 - Strong South
+    winds first half of 24 hours. Sea rough. Moderate South to S.E. winds second
+    half of 24 hours with sea moderately rough. Small rowboat landed near 1500 bearing
+    starving man, name Owen Kelly. Keepers\u2019 consensus to wait until replacement
+    keepers arrive to maintain light. General duties for the day. Retrieved spare
+    bedding from lighthouse storage.  "
   - '25 - Moderate S.E. winds full 24 hours. Moderate rain showers. Sea moderately
     rough. General duties for the day. Asst directed to maintain grounds come next
     clear day.\n\n26 - Strong South winds first half of 24 hours. Sea rough. Moderate
@@ -24826,45 +25223,6 @@ MonoBehaviour:
     not leave room. Don\u2019t knwo what happened. Setting out for help on manland.      "
   - ...
   background: {fileID: 21300000, guid: 4790280fb0f7d2340a82fbae71a9bae9, type: 3}
---- !u!114 &1816134722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816134717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f9f48fc7f6afc040a88d6f93e914347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemID: 005
-  itemName: 
-  firstInteractionText: []
-  followUpText: []
-  interactionPromptText: 
-  seen: 0
---- !u!65 &1816134723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816134717}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.024127683, y: 0.020000001, z: 0.020000001}
-  m_Center: {x: 0.014106381, y: 0.006194955, z: 0.0000001192231}
 --- !u!1 &1818898535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ddab99bd67ef7d34586a82c03cc5dc5b,
@@ -26676,6 +27034,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1987831997}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea11ece64891e3b4fad2817433e5cd63,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1987832001}
   m_SourcePrefab: {fileID: 100100000, guid: ea11ece64891e3b4fad2817433e5cd63, type: 3}
 --- !u!4 &1987831995 stripped
 Transform:
@@ -26728,6 +27090,74 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011403464, y: 0.014794895, z: 0.0021430426}
   m_Center: {x: -0.000041408402, y: 0.0023286056, z: -0.00011107164}
+--- !u!114 &1987832001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987831996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5020d868176a0344b6031cbe0b76646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passages:
+  - "\\n\\nFeb 14 - Around 1200 I landed on Halkin Isle, staying for oen month. Have
+    not worked with Hugh O\u2019Brien befre. Seems gruff and quiet. Island is excellent
+    for fishng, love to work here when calm. Did my regular duties and choped firewood.
+    Joined O\u2019Brien as he led prayer. He seems to feel strongyl.  \\n\\n\\n\\nFeb
+    17 - Wind must have brokn lighthouse glass. Quiet proud of noticing. Today we
+    replaced the pane, O\u2019Brien struggles to climb up to lantrn room. Offered
+    to do most of geneal duties. Able to fish today. Caught two wrasse and a large
+    mean macekrel. Cooked poorly.  "
+  - "\\n\\nFeb 20 - Aphrodite herself rose form the sea. More beautiful than I\u2019d
+    thunk. Fine faced as a fox and in an awful staet. O\u2019Brien insisted to keep
+    Kelly until we leave isle to. I wante to get help, not a state to stoy in. Got
+    extra blanket for the beauy. Lay awake thnking of Kelly. \\n\\n\\n\\nFeb 22 -
+    Work is liht with such a fine companian as Kelly. Joined for prayer, O\u2019Brein
+    quite pleased. We talk of the woods and the sea and the tools we wrk with. Kelly
+    wittles. What a fine craft!   "
+  - "\\n\\nFeb 23 - O\u2019Brien and Kelly and I, we puled up the boat Kelly awashed
+    up in. Storm is coming, Aphrodite cannot return to the sea yet. More time to
+    spend togethr, and I must say I rejoise. \\n\\n\\n\\nFeb 27 - All is well! My
+    fine Kelly did cook fr us today and quiet a lovly meal. Both O\u2019Brien and
+    I are poor in the kitchen, but my Aprodite does know her way arond. We have fished
+    togther and I find meself forgeting to write from joy and business. Kelly makes
+    the tme go by so easy.   "
+  - "\\n\\nMar 3 - If you think no fightign with ony three on a isle, you would be
+    so mistakn! Food is run lower than wanted, and O\u2019Berin takes it out with
+    Kelly. As if my Aphrodte chose to wash ashore and remin! Never one to stnd by
+    wrong I begn to argue with the princpal keeper, and he O\u2019Brien rored indency
+    betwen Kelly and I! No such thing, althogh I  long to be clse to my Aphrodite.
+    It was nat made to be so. \\n\\nMar 5 - Oh were to begin! My Aprhodite, my Kelly,
+    oh we becme one only last nigh. Kelly gave to me a litle fox, a littl whittled
+    thing made by Kelly\u2019s hands. I felt as if I were to brst, and I had noting
+    to give! But love is a give and tke, and while I fear to writ how we spent the
+    time I will neer forget the night.    "
+  - "\\n\\nMar 11 - As all is wondeerful with Kelly and I, O\u2019Brein seem to have
+    issues wih us. He has not spoek to Kelly since their fight many days ago and
+    Kelly tells the same. I do my work as an homest man and there is much work to
+    do. My dear Kelly joins me on times and there are days we spnd specal time togethr
+    in the light room. Not quiet romantic, but well for a man like me. Sometime we
+    make do in my quarter, if the storm is loud enugh. \\n\\nMar 14 - O\u2019Brien
+    may have lost hi mind. The princpal keeper hold up in his room and will not leave.
+    No boat to come for us tday, storm heavy as it is. I fear for him but one keper
+    must stay awek to work the light and kep the log. Kelly cannt do so.      "
+  - "\\n\\nMar 17 - I canno stay this way to set the ligh. I kno that O\u2019Brien
+    and I will face the cort for givin up the work but I fnd mysel hunry nd tried
+    like a dog. Kelly and I lay togther, do not knw if we will be fond like this.
+    I fear. \\n\\n\\n\\nMar 18 - oh Lord fogive me for O\u2019Bren I neer meant to
+    hrt anothe man in ths way when I fnd him stabing Kelly my lve I muts fiht the
+    dvil off evn if he is ony anther man like O\u2019Brine oh Lord forgive me for
+    loing so har I\u2019d kil to sae him only cming fro choping wood and such a sigt
+    I fond myslf rushd in fear form y love and I cant be forgien   "
+  - "\\n\\nMar 20 - Afer lack of answer from O\u2019Brien\u2019s quarter I find mysel
+    needng to go to land. The sea is calm nd Kelly and I will set out to fin help.
+    We wll seek police in Halkn Bay, if we ar not there we must have perished at
+    sea.  "
+  - ...
+  background: {fileID: 21300000, guid: c5b5c2ffee3801948a3b5185d7ce3d34, type: 3}
 --- !u!1 &2022128138
 GameObject:
   m_ObjectHideFlags: 0
@@ -32356,55 +32786,87 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passages:
-  - 'February 1892, 14 - Replaced keepers Flannan and Roberts near 12.A.M. Last half
-    of 24 hours light variable winds. Sea moderately smooth. General duties for the
-    day. No firewood remaining. Asst chopped firewood. Extended prayer at 7.P.M.
-    15 - Strong South winds first third of 24 hours. Last part of 24 hours moderate
-    East to S.E. winds with light rain showers. Sea rough. General duties for the
-    day. Keepers secured shed. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  - '16 - Moderate East winds all of 24 hours with rain. Sea moderately smooth. General
-    duties for the day. Asst reported small crack in lantern room window. 17 - Light
-    N.E. to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool
-    weather. Sea smooth. General duties for the day. Keepers replaced glass in South
-    lantern room window. Asst went fishing. 18 - Light East winds full 24 hours.
-    Sea smooth. General duties for the day. '
-  background: {fileID: 21300000, guid: 20d605b9c23be9c40b3664c0bea51176, type: 3}
+  - 'February 1892, 14 - Replaced keepers Flannan and Roberts near 1200. Will stay
+    for one month. Last half of 24 hours light variable winds. Sea moderately smooth.
+    General duties for the day. No firewood remaining. Asst chopped firewood. Extended
+    prayer at 1900 with all present. \n\n15 - Strong South winds first third of 24
+    hours. Last part of 24 hours moderate East to S.E. winds with light rain showers.
+    Sea rough. General duties for the day. Keepers secured shed. \n\n16 - Moderate
+    East winds all of 24 hours with rain. Sea moderately smooth. General duties for
+    the day. Asst reported small crack in lantern room window. \n\n17 - Light N.E.
+    to S.E. winds first half of 24 hours. Last half of 24 hours fair & cool weather.
+    Sea smooth. General duties for the day. Keepers replaced glass in South lantern
+    room window. '
+  - "18 - Light East winds full 24 hours. Sea smooth. General duties for the day.
+    \\n\\n19 - Moderate East winds first half of 24 hours. Last half of 24 hours
+    light to moderate South winds. Sea moderately smooth full 24 hours. General duties
+    for the day. Asst opened fresh oil canister for light. \\n\\n20 - Strong South
+    winds first half of 24 hours. Sea rough. Moderate South to S.E. winds second
+    half of 24 hours with sea moderately rough. Small rowboat landed near 1500 bearing
+    starving man, name Owen Kelly. Keepers\u2019 consensus to wait until replacement
+    keepers arrive to maintain light. General duties for the day. Retrieved spare
+    bedding from lighthouse storage.  "
+  - '21 - Light North winds full 24 hours with light rain showers. Sea moderately
+    smooth. General duties for the day. Extended prayer at 1900, Kelly also in attendance.
+    \n\n22 - Moderate East to N.E. winds first half of 24 hours. Variable moderate
+    winds last half of 24 hours. Sea moderately rough full 24 hours. General duties
+    for the day. Asst cleaned glass in lantern room. \n\n23 - Moderate North winds
+    full 24 hours with strong rain showers. Sea rough. Keepers and Kelly pulled boat
+    up on beach. General duties for the day. Keepers secured shed. \n\n24 - Light
+    East winds first third of 24 hours. Sea moderately smooth. Strong East to S.E.
+    winds rest of 24 hours with light rain showers. Sea moderately rough. General
+    duties for the day. Asst and Kelly went fishing.  '
+  - '25 - Moderate S.E. winds full 24 hours. Moderate rain showers. Sea moderately
+    rough. General duties for the day. Asst directed to maintain grounds come next
+    clear day.\n\n26 - Strong South winds first half of 24 hours. Sea rough. Moderate
+    East winds last half of 24 hours with light rain showers. Sea moderately rough.
+    General duties for the day. Asst reported mild damage to dock. \n\n27 - Moderate
+    East to N.E. winds full 24 hours with heavy rain showers. Sea rough. General
+    duties for the day. Kelly requested work on island, assigned cooking.    '
+  - '28 - Moderate North winds first half of 24 hours. Light East to S.E. winds second
+    half of 24 hours with light rain showers. Sea moderately smooth. General duties
+    for the day. Extended prayer at 1900 with all present. \n\n29 - Light South winds
+    full 24 hours with light to moderate rain showers. Sea moderately smooth. Steamer
+    Willbury passed near 1730 on West side. General duties for the day. Keepers repaired
+    dock damage. Asst and Kelly went fishing. \n\nMarch 1892, 1 - Light to moderate
+    East winds full 24 hours. Sea moderately smooth. General duties for the day.
+    Asst and Kelly went fishing. Stricter rationing needed.    '
+  - '2 - Light North to N.W. winds first 24 hours. Last half of 24 hours fair & cool
+    weather. Sea smooth. General duties for the day. Asst maintained grounds. Clothing
+    washed and dried.  \n\n3 - Strong West winds full 24 hours with heavy rain showers.
+    Sea rough. Unidentified boat signalled passing near 1020 on East side. Limited
+    duties for the day.  \n\n4 - Strong West to N.W. winds first 24 hours. Strong
+    N.W. winds final 24 hours with moderate rain showers. Sea rough. General duties
+    for the day.  \n\n5 - Moderate West winds first 24 hours. Strong West to S.W.
+    winds final 24 hours. Moderate rain showers full 24 hours. Sea rough. General
+    duties for the day. Asst may have fallen ill, stayed in room first half of 24
+    hours.     '
+  - '6 - Strong South winds full 24 hours with moderate to heavy rain showers. Sea
+    rough. Limited duties for the day. Extended prayer at 1930 with all present. 
+    \n\n7 - Moderate to strong South winds full 24 hours with moderate rain showers.
+    Sea moderately rough. General duties for the day. Kelly accompanied Asst to lighthouse.
+    \n\n8 - Moderate S.W. winds first half of 24 hours. Last half of 24 hours strong
+    variable winds. Sea rough. General duties for the day. Rationing concern. \n\n9
+    - Strong West to S.W. winds full 24 hours with moderate rain showers. Sea rough.
+    Limited duties for the day.   '
+  - '10 - Strong variable winds first half of 24 hours. Moderate West winds second
+    half of 24 hours. Sea rough. General duties for the day. Kelly accompanied Asst
+    to lighthouse. \n\n11 - Strong South to S.W. winds full 24 hours. Moderate to
+    heavy rain showers. Sea rough. Limited duties for the day. Asst directed to chop
+    firewood when possible. \n\n12 - Moderate West winds full 24 hours. Light to
+    moderate rain showers. Sea moderately rough. General duties for the day.  \n\n13
+    - Moderate South to S.W. winds first half of 24 hours. Moderate West winds second
+    half of 24 hours with light rain showers. General duties for the day. Asst and
+    Kelly defiled lighthouse. Extended prayer at 1800. The Lord must be asked for
+    forgiveness.    '
+  - "14 - Strong West winds full 24 hours. He is angry. Sea rough. Cannot go home.
+    This is divine punishment. \\n\\n15 Marh - Strng West to South West winds for
+    full day. Heavy rain. Princpal stayed in room. Limited work for day. \\n\\n16
+    Marc - Strong Souh to West winds all day. Medium rain. Owen helped with gneral
+    duties for day. \\n\\n71 March - Strong West winds. Rough sea. General dutes
+    done. Hugry. Tired.  \\n\\n20 March - Clear weather. Calm sea. Principal wll
+    not leave room. Don\u2019t knwo what happened. Setting out for help on manland.      "
+  background: {fileID: 21300000, guid: 4790280fb0f7d2340a82fbae71a9bae9, type: 3}
 --- !u!1001 &2097116485
 PrefabInstance:
   m_ObjectHideFlags: 0
