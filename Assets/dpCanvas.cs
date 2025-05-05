@@ -16,7 +16,12 @@ public class dpCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.eulerAngles = new Vector3
+        (
+             0,
+             transform.eulerAngles.y,
+             0
+        );
         //transform.localScale = new Vector3(0.2f,0.2f,0.2f);
         transform.LookAt(player.transform.position);
     }

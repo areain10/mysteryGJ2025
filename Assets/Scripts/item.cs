@@ -35,7 +35,8 @@ public class item : MonoBehaviour
             {
                 itemName = item[1];
                 interactionPromptText = item[2];
-                canPickedUp = interactionPromptText[0].ToString().ToLower() == "p";
+                //canPickedUp = false;
+                canPickedUp = interactionPromptText[0].ToString().ToLower() != "i";
                 firstInteractionText = item[3].Split('|');
                 followUpText = item[4].Split('|'); 
 
@@ -100,8 +101,7 @@ public class item : MonoBehaviour
         timer = 0;
         if(canPickedUp)
         {
-            Destroy(gameObject);
-
+            gameObject.SetActive(false);
         }
     }
 }

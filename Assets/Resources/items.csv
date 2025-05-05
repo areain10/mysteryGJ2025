@@ -13,7 +13,7 @@ ID;NAME;PROMPT;FIRST TEXT;FOLLOW UP TEXT
 012;Extra Bedding;Interact;A strange place to store extra bedding.;Did one of the men sleep out here instead of their own bed?
 013;Extra Bedding;Interact;A strange place to store extra bedding.;Did one of the men sleep out here instead of their own bed?
 014;Medical Supplies;Interact;Someone must have gotten hurt. I wonder why they left it out?;Who needed this?
-015;Bible;Read;O’Brien was a devoted believer. He must have been doing some heavy reading.;
+015;Bible;Read;O’Brien was a devoted believer. He must have been doing some heavy reading.;O’Brien was a devoted believer. He must have been doing some heavy reading.
 016;Empty Knife Holder;Interact;Looks like a knife is missing.;A knife is missing from the holder.
 017;O'Brien's Keys;Pickup;The principal keeper’s key set. Did O'Brien lock himself inside here?;
 018;Jack’s room key;Pickup;A key. It probably fits to a lock somewhere on the island.;

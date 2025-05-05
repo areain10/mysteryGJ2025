@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.Burst.CompilerServices;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
+using System.Transactions;
 
 public class Detection : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class Detection : MonoBehaviour
     public readable currentReading;
     bool canNextLine;
     float continueTimer;
+    bool canTeleport;
+    Transform tpTrans;
     void Start()
     {
         currentLine= 0;
@@ -45,21 +48,20 @@ public class Detection : MonoBehaviour
             itemPopup.SetActive(false);
         }
         canNextLine = false;
-       // var col = renderer.material.color;
+        canTeleport=false;
+        // var col = renderer.material.color;
         //col.a = 1f;
     }
     IEnumerator teleportTo(Transform loc)
     {
-        while(isInteracting)
-        {
-
-        }
+        canTeleport = false;
         gameObject.GetComponent<CharacterController>().enabled = false;
         StartCoroutine(GameObject.FindAnyObjectByType<gameManager>().fadeInBlack(1));
         yield return new WaitForSeconds(1f);
 
         gameObject.transform.position = loc.position;
         gameObject.GetComponent<CharacterController>().enabled = true;
+        
     }
     void LoadInteractionText(string[] texts)
     {
@@ -103,8 +105,14 @@ public class Detection : MonoBehaviour
 
 
     }
+    //bool canTeleport;
     void Update()
     {
+        if(canTeleport && !isInteracting)
+        {
+            canTeleport=false;
+            StartCoroutine(teleportTo(tpTrans));
+        }
         RaycastHit hits;
         //Ray rays = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         // Ray rays = Physics.Raycast( Camera.main.gameObject.transform.position, Camera.main.gameObject.transform.forward);
@@ -175,8 +183,10 @@ public class Detection : MonoBehaviour
                         script.gameObject.GetComponent<AudioSource>().Play();
                     }
                     catch { }
-                    Debug.Log("FoundDoor");
-                    StartCoroutine( teleportTo(script.spawnPoint));
+                    Debug.Log("FoundDoor "+isInteracting);
+                    tpTrans = script.spawnPoint;
+                    canTeleport = true;
+                    //StartCoroutine( teleportTo(script.spawnPoint));
                     
                 }
                 else if (hit.collider.gameObject.GetComponent<safe>() != null)
@@ -220,17 +230,23 @@ public class Detection : MonoBehaviour
     {
         if (currentReading != null)
         {
+            itemPopup.SetActive(false);
             readingManager.gameObject.SetActive(true);
             isInteracting = true;
             GetComponent<clueManager>().toggleNotePad(true);
             readingManager.load(currentReading.passages, currentReading.background);
 
         }
-        itemPopup.SetActive(false);
-        isInteracting = false;
-        isPromptActive = false;
-        seen = true;
-        currentLine = 0;
+        
+        else
+        {
+            itemPopup.SetActive(false);
+            isInteracting = false;
+            isPromptActive = false;
+            seen = true;
+            currentLine = 0;
+        }
+       
     }
 
     void OnMouseEnter()

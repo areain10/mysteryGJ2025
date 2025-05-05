@@ -16,21 +16,21 @@ RenderSettings:
   serializedVersion: 9
   m_Fog: 1
   m_FogColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
-  m_FogMode: 2
-  m_FogDensity: 0.06
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_FogMode: 3
+  m_FogDensity: 0.05
+  m_LinearFogStart: 1
+  m_LinearFogEnd: 153.4
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.22
+  m_AmbientIntensity: 3.73
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 454ac0a1fdbc3dc48ba415476f520ba2, type: 2}
   m_HaloStrength: 1
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
-  m_HaloTexture: {fileID: 0}
+  m_FlareFadeSpeed: -174.2
+  m_HaloTexture: {fileID: 2800000, guid: d5ce46e90ffd8714a9a08e0ae93747ae, type: 3}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
@@ -6860,7 +6860,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a470a08af6b0bb84a9e76d7e13d73c05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174441386}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a470a08af6b0bb84a9e76d7e13d73c05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174441385}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a470a08af6b0bb84a9e76d7e13d73c05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174441387}
   m_SourcePrefab: {fileID: 100100000, guid: a470a08af6b0bb84a9e76d7e13d73c05, type: 3}
 --- !u!1 &207403263 stripped
 GameObject:
@@ -7013,7 +7025,6 @@ Transform:
   - {fileID: 628271500}
   - {fileID: 875517731}
   - {fileID: 1398864658}
-  - {fileID: 1873058063}
   - {fileID: 329160386}
   - {fileID: 1703615369}
   - {fileID: 1156663210}
@@ -9496,110 +9507,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1973913899}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &549494340
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 699743321077708961, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.686
-      objectReference: {fileID: 0}
-    - target: {fileID: 2140811788757921430, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterLayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 3181624809690116650, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: waveHeight
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3181624809690116650, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: smallWaveHeight
-      value: 0.0005
-      objectReference: {fileID: 0}
-    - target: {fileID: 5058042280827695664, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8514b0b47ccb789479e89ac51cbdc3b1, type: 2}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 92.747
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 92.747
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 92.747
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 22.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 156.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 77.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365772220619593446, guid: 403870fa93ad42c45908278b3f87f8db,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 247782581441747055, guid: 403870fa93ad42c45908278b3f87f8db, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 403870fa93ad42c45908278b3f87f8db, type: 3}
 --- !u!1 &553196730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16d71818854a7a8478cfec008802d77d,
@@ -10213,6 +10120,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 642450977}
     - targetCorrespondingSourceObject: {fileID: -5008557958523460718, guid: 11096bd9c2c19b543a4128cae705dbf9,
         type: 3}
       insertIndex: -1
@@ -10229,6 +10140,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1629050630}
+    - targetCorrespondingSourceObject: {fileID: 3339669368255468543, guid: 11096bd9c2c19b543a4128cae705dbf9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 828314332}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -6182787764532645197, guid: 11096bd9c2c19b543a4128cae705dbf9,
         type: 3}
@@ -10492,6 +10407,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 583153636}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &642450976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642450977}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642450977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642450976}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 82.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1559849868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &655074088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e45d4a950efb133449cb6068dec8a8f7,
@@ -13035,6 +12981,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818301974}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &828314331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828314332}
+  - component: {fileID: 828314334}
+  - component: {fileID: 828314333}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &828314332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828314331}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347494724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &828314333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828314331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &828314334
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828314331}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.968276, b: 0.7688679, a: 1}
+  m_Intensity: 33.3
+  m_Range: 40.92
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 5.88
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &840402854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16246,8 +16310,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8400985, y: 1, z: 1.6971335}
-  m_Center: {x: 0.07995255, y: 0, z: 0.14081658}
+  m_Size: {x: 0.8400985, y: 2.412119, z: 1.6971335}
+  m_Center: {x: 0.079952605, y: -0.14056134, z: 0.1408166}
 --- !u!23 &1099052419
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16306,7 +16370,7 @@ Transform:
   m_GameObject: {fileID: 1099052416}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.06497044, z: 0.000000007450581, w: 0.99788725}
-  m_LocalPosition: {x: 0.23, y: 0, z: -1.73}
+  m_LocalPosition: {x: 0.23, y: 2.36, z: -1.73}
   m_LocalScale: {x: 2.2727275, y: 4.8579545, z: 2.2727275}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17048,6 +17112,70 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.060466003, y: 0.17648995, z: 0.40362784}
   m_Center: {x: 0.00000564754, y: -0.05190157, z: -0.01860737}
+--- !u!1 &1174441382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a470a08af6b0bb84a9e76d7e13d73c05,
+    type: 3}
+  m_PrefabInstance: {fileID: 192401861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1174441385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174441382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9f48fc7f6afc040a88d6f93e914347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 021
+  itemName: 
+  firstInteractionText: []
+  followUpText: []
+  interactionPromptText: 
+  seen: 0
+--- !u!65 &1174441386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174441382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.023062894, y: 0.0995883, z: 0.02982871}
+  m_Center: {x: 0.004042644, y: 0.17108856, z: 0.0073379935}
+--- !u!114 &1174441387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174441382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5020d868176a0344b6031cbe0b76646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passages:
+  - "my pretty darling, aphrodite\u2019s beloved, there were four ships beneath a
+    pearl-black sky, the sea was hungry, the stars turned shy. only two were spared
+    the reef\u2019s cruel bite, for they had seen your beckoning light. in eight
+    days\u2019 time, a storm will cry, so guide us home, don\u2019t let us die."
+  - ..
+  background: {fileID: 0}
 --- !u!1 &1176861906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e348891cb3908c498e81c6047d57750,
@@ -18797,14 +18925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\\n\\nMar 17 - I canno stay this way to set the ligh. I kno that O\u2019Brien
-    and I will face the cort for givin up the work but I fnd mysel hunry nd tried
-    like a dog. Kelly and I lay togther, do not knw if we will be fond like this.
-    I fear.\r\\n\\n\\n\\nMar 18 - oh Lord fogive me for O\u2019Bren I neer meant
-    to hrt anothe man in ths way when I fnd him stabing Kelly my lve I muts fiht
-    the dvil off evn if he is ony anther man like O\u2019Brine oh Lord forgive me
-    for loing so har I\u2019d kil to sae him only cming fro choping wood and such
-    a sigt I fond myslf rushd in fear form y love and I cant be forgien\r\n\n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b287cddfb5bbee64dbb2a0a4cc72be31, type: 2}
   m_sharedMaterial: {fileID: 5717828310690284954, guid: b287cddfb5bbee64dbb2a0a4cc72be31,
@@ -25004,17 +25125,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 242383008}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 49.45359
+      value: 49.453587
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 49.453583
+      value: 49.45358
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
@@ -25024,17 +25145,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -925.39496
+      value: 34.604977
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -246.21185
+      value: -34.66032
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -53.03772
+      value: -53.037746
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
         type: 3}
@@ -25093,12 +25214,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1873058069}
   m_SourcePrefab: {fileID: 100100000, guid: 12f1762ec2417a7488a22a897b2dd217, type: 3}
---- !u!4 &1873058063 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12f1762ec2417a7488a22a897b2dd217,
-    type: 3}
-  m_PrefabInstance: {fileID: 1873058062}
-  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1873058066
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25134,15 +25249,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passages:
-  - "Therefore God gave them over in the sinful desires of their hearts to sexual
-    impurity for the degrading of their bodies with one another. 25 They exchanged
-    the truth about God for a lie, and worshiped and served created things rather
-    than the Creator\u2014who is forever praised. Amen."
-  - <mark>26 Because of this, God gave them over to shameful lusts. Even their women
-    exchanged natural sexual relations for unnatural ones. 27 In the same way the
-    men also abandoned natural relations with women and were inflamed with lust for
-    one another. Men committed shameful acts with other men, and received in themselves
-    the due penalty for their error.</mark>
+  - "The Lord said to Moses,<br> 2 \u201CSpeak to the Israelites and say to them:
+    \u2018I am the Lord your God.<br> 3 You must not do as they do in Egypt, where
+    you used to live, and you must not do as they do in the land of Canaan, where
+    I am bringing you. Do not follow their practices.<br> 4 You must obey my laws
+    and be careful to follow my decrees. I am the Lord your God.<br> 5 Keep my decrees
+    and laws, for the person who obeys them will live by them. I am the Lord.<br>
+    6 \u201C\u2018No one is to approach any close relative to have sexual relations.
+    I am the Lord.<br>"
+  - "7 \u201C\u2018Do not dishonor your father by having sexual relations with your
+    mother. She is your mother; do not have relations with her.<br> 8 \u201C\u2018Do
+    not have sexual relations with your father\u2019s wife; that would dishonor your
+    father.<br> 9 \u201C\u2018Do not have sexual relations with your sister, either
+    your father\u2019s daughter or your mother\u2019s daughter, whether she was born
+    in the same home or elsewhere.<br> 10 \u201C\u2018Do not have sexual relations
+    with your son\u2019s daughter or your daughter\u2019s daughter; that would dishonor
+    you.<br> 11 \u201C\u2018Do not have sexual relations with the daughter of your
+    father\u2019s wife, born to your father; she is your sister.<br> "
+  - "12 \u201C\u2018Do not have sexual relations with your father\u2019s sister;
+    she is your father\u2019s close relative.<br> 13 \u201C\u2018Do not have sexual
+    relations with your mother\u2019s sister, because she is your mother\u2019s close
+    relative.<br> 14 \u201C\u2018Do not dishonor your father\u2019s brother by approaching
+    his wife to have sexual relations; she is your aunt.<br> 15 \u201C\u2018Do not
+    have sexual relations with your daughter-in-law. She is your son\u2019s wife;
+    do not have relations with her.<br> 16 \u201C\u2018Do not have sexual relations
+    with your brother\u2019s wife; that would dishonor your brother.<br> "
+  - "12 \u201C\u2018Do not have sexual relations with your father\u2019s sister;
+    she is your father\u2019s close relative.<br> 13 \u201C\u2018Do not have sexual
+    relations with your mother\u2019s sister, because she is your mother\u2019s close
+    relative.<br> 14 \u201C\u2018Do not dishonor your father\u2019s brother by approaching
+    his wife to have sexual relations; she is your aunt.<br> 15 \u201C\u2018Do not
+    have sexual relations with your daughter-in-law. She is your son\u2019s wife;
+    do not have relations with her.<br> 16 \u201C\u2018Do not have sexual relations
+    with your brother\u2019s wife; that would dishonor your brother.<br> "
+  - "17 \u201C\u2018Do not have sexual relations with both a woman and her daughter.
+    Do not have sexual relations with either her son\u2019s daughter or her daughter\u2019s
+    daughter; they are her close relatives. That is wickedness.<br> 18 \u201C\u2018Do
+    not take your wife\u2019s sister as a rival wife and have sexual relations with
+    her while your wife is living.<br> 19 \u201C\u2018Do not approach a woman to
+    have sexual relations during the uncleanness of her monthly period.<br> 20 \u201C\u2018Do
+    not have sexual relations with your neighbor\u2019s wife and defile yourself
+    with her.<br> "
+  - "26 But you must keep my decrees and my laws. The native-born and the foreigners
+    residing among you must not do any of these detestable things,<br> 27 for all
+    these things were done by the people who lived in the land before you, and the
+    land became defiled.<br> 28 And if you defile the land, it will vomit you out
+    as it vomited out the nations that were before you.<br> 29 \u201C\u2018Everyone
+    who does any of these detestable things\u2014such persons must be cut off from
+    their people.<br> 30 Keep my requirements and do not follow any of the detestable
+    customs that were practiced before you came and do not defile yourselves with
+    them. I am the Lord your God.\u2019<br> "
   background: {fileID: 21300000, guid: 20d605b9c23be9c40b3664c0bea51176, type: 3}
 --- !u!114 &1873058070
 MonoBehaviour:
@@ -32633,9 +32789,9 @@ SceneRoots:
   - {fileID: 5236156846065837162}
   - {fileID: 1613590289}
   - {fileID: 1035401938}
-  - {fileID: 549494340}
   - {fileID: 1684183379}
   - {fileID: 726933671}
+  - {fileID: 1873058062}
   - {fileID: 805688720}
   - {fileID: 352281565}
   - {fileID: 332824309}
