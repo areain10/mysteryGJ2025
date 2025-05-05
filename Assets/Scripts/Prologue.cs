@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Prologue : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class Prologue : MonoBehaviour
         }
     }
 
+    private void Continue()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     private IEnumerator Line(int line) 
     {
         yield return StartCoroutine(Typing(line));
@@ -45,5 +51,7 @@ public class Prologue : MonoBehaviour
         {
             yield return StartCoroutine(Line(i));
         }
+
+        Continue();
     }
 }
