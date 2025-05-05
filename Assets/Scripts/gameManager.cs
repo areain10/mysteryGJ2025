@@ -23,8 +23,8 @@ public class gameManager : MonoBehaviour
         cluesCollected = cM.cluesWritten;
         clueID = cM.itemsInteracted;
         StartCoroutine(fadeInBlack(-1));
-        SceneManager.LoadScene(2);
-        foreach(var clue in cluesCollected[0]) Debug.Log(clue.ToString());
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        foreach (var clue in cluesCollected[0]) Debug.Log(clue.ToString());
         foreach(var items in clueID) Debug.Log(items.ToString());
     }
     // Start is called before the first frame update
